@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/World.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+
+[node name="World" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 35.4297, 0, 0, 0, 1, 0, 0, 0, 46.5773, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 1 )
+
+[node name="FloorMesh" type="MeshInstance" parent="Floor/CollisionShape"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Box" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.368, 1.03413, 0 )
+mesh = SubResource( 3 )
+material/0 = null
