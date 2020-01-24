@@ -27,13 +27,63 @@ material/0 = null
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 0, 3, 0 )
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 8.34578, 3, -0.584139 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 15.368, 3, 0 )
 shape = SubResource( 4 )
 
 [node name="Box" type="MeshInstance" parent="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 15.368, 3, 0 )
 mesh = SubResource( 3 )
 material/0 = null
+
+[node name="Snake" type="Spatial" parent="."]
+
+[node name="SnakeBase" type="RigidBody" parent="Snake"]
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 0.518076, 2.46687, 0.0826998 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Snake/SnakeBase"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7708, 5.22195, 2.36865 )
+shape = SubResource( 4 )
+
+[node name="Box" type="MeshInstance" parent="Snake/SnakeBase"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7708, 5.22195, 2.36865 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="SnakeBase2" type="RigidBody" parent="Snake"]
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 1.87781, 5.14124, 5.7294 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Snake/SnakeBase2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46379, 0, 0 )
+shape = SubResource( 4 )
+
+[node name="Box" type="MeshInstance" parent="Snake/SnakeBase2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.46379, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="SnakeBase3" type="RigidBody" parent="Snake"]
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 8.34578, 7.33356, 5.7294 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Snake/SnakeBase3"]
+shape = SubResource( 4 )
+
+[node name="Box" type="MeshInstance" parent="Snake/SnakeBase3"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="SnakeBase4" type="RigidBody" parent="Snake"]
+transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 8.34578, 0.821921, 5.7294 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Snake/SnakeBase4"]
+shape = SubResource( 4 )
+
+[node name="Box" type="MeshInstance" parent="Snake/SnakeBase4"]
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.566376, 0.824147, 0, -0.824147, -0.566376, -6.05579, 19.2997, 0 )
+light_color = Color( 1, 0.866667, 0, 1 )
+shadow_enabled = true
+shadow_color = Color( 0.00784314, 0, 1, 1 )
