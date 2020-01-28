@@ -5,7 +5,7 @@ const gravity = 10
 const mouseSensitivity = 0.13
 const run_mod = 1.5
 
-var walkSpeed = 20
+var walkSpeed = 7
 var jumpForce = 80
 var camera_angle = 0
 var movement = Vector3()

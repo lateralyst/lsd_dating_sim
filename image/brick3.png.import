@@ -17,12 +17,12 @@ dest_files=[ "res://.import/brick3.png-d7f2b5b1666acbb8ada8a6300711f987.s3tc.ste
 [params]
 
 compress/mode=2
-compress/lossy_quality=0.7
+compress/lossy_quality=0.0
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
