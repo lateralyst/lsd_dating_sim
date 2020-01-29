@@ -12,7 +12,7 @@ func _process(delta):
 	var camera_pos = get_viewport().get_camera().global_transform.origin
 	var camera_dir = -get_viewport().get_camera().global_transform.basis.z
 	camera_pos.y = 0
-	
+	camera_dir.y = 0
     
 	camera_pos += 10000 * camera_dir
 	
