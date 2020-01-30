@@ -166,7 +166,6 @@ material/0 = SubResource( 8 )
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 
 [node name="Spatial" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Sprite3D" type="Sprite3D" parent="Spatial"]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24.0447, 0, 14.1834 )
@@ -261,7 +260,6 @@ alpha_cut = 1
 texture = ExtResource( 13 )
 
 [node name="TreeClump2" type="Spatial" parent="Spatial"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6439, 0.1, 21.7539 )
 
 [node name="Tree5" type="Sprite3D" parent="Spatial/TreeClump2"]
@@ -413,7 +411,6 @@ alpha_cut = 1
 texture = ExtResource( 13 )
 
 [node name="Mudland" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="dude" type="Sprite3D" parent="Mudland"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9615, 0, 19.7447 )

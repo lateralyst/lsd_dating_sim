@@ -14,7 +14,7 @@ var tracked_movement = 0.0
 var max_tracked_movement = 4000.0
 
 
-func _process(delta):
+func _physics_process(delta):
 	var input = Vector3()
 	
 	if Input.is_action_pressed("left"):

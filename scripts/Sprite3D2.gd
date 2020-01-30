@@ -1,23 +1,20 @@
 extends Sprite3D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var camera = get_viewport().get_camera()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	pass # Replace with function body.
+	pass
+
 func _process(delta):
-	var camera_pos = get_viewport().get_camera().global_transform.origin
-	var camera_dir = -get_viewport().get_camera().global_transform.basis.z
+	look_at_player()
+
+func look_at_player():	
+	var camera_pos = camera.global_transform.origin
+	var camera_dir = -camera.global_transform.basis.z
 	camera_pos.y = 0
 	camera_dir.y = 0
-    
-	camera_pos += 10000 * camera_dir
-	
+
+	camera_pos += 1000 * camera_dir
+
 	look_at(camera_pos, Vector3(0, 1, 0))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
