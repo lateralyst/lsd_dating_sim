@@ -5,8 +5,8 @@ const gravity = 10
 const mouseSensitivity = 0.13
 const run_mod = 1.5
 
-var walkSpeed = 7
-var jumpForce = 80
+var walkSpeed = 8
+var jumpForce = 10
 var camera_angle = 0
 var movement = Vector3()
 
@@ -15,9 +15,9 @@ func _process(delta):
 	var input = Vector3()
 	
 	if Input.is_action_pressed("left"):
-		rotate_y(0.02)
+		rotate_y(0.017)
 	if Input.is_action_pressed("right"):
-		rotate_y(-0.02)
+		rotate_y(-0.017)
 	
 	if Input.is_action_pressed("forward"):
 		input.x = 1

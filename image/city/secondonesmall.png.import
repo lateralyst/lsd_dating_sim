@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/paintf.png-1329044accc985c0fef6a0915d8382df.s3tc.stex"
-path.etc="res://.import/paintf.png-1329044accc985c0fef6a0915d8382df.etc.stex"
+path.s3tc="res://.import/secondonesmall.png-4b6f48a1acd4142ebfd7360c5aa2d721.s3tc.stex"
+path.etc="res://.import/secondonesmall.png-4b6f48a1acd4142ebfd7360c5aa2d721.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://image/paintf.png"
-dest_files=[ "res://.import/paintf.png-1329044accc985c0fef6a0915d8382df.s3tc.stex", "res://.import/paintf.png-1329044accc985c0fef6a0915d8382df.etc.stex" ]
+source_file="res://image/city/secondonesmall.png"
+dest_files=[ "res://.import/secondonesmall.png-4b6f48a1acd4142ebfd7360c5aa2d721.s3tc.stex", "res://.import/secondonesmall.png-4b6f48a1acd4142ebfd7360c5aa2d721.etc.stex" ]
 
 [params]
 
@@ -22,7 +22,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=true
+flags/filter=false
 flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
