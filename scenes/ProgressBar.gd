@@ -3,7 +3,7 @@ extends ProgressBar
 onready var player
 
 func _ready():
-	player = get_node("/root").get_node("Player")
+	player = get_node("/root/World").get_node("Player")
 	self.value = self.max_value
 
 func _process(delta):
