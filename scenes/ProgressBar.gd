@@ -1,8 +1,9 @@
 extends ProgressBar
 
-onready var player = get_node("../../Player")
+onready var player
 
 func _ready():
+	player = get_node("/root").get_node("Player")
 	self.value = self.max_value
 
 func _process(delta):

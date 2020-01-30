@@ -1,7 +1,7 @@
 extends Node
 
-onready var pause_menu = get_node("../../CanvasLayer/Pause Menu")
-onready var post_p = get_node("../../CanvasLayer/Post-Processing")
+onready var pause_menu = get_node("../../UI/CanvasLayer/Pause Menu")
+onready var post_p = get_node("../../UI/CanvasLayer/Post-Processing")
 
 func _ready():
 #	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
