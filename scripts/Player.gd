@@ -5,31 +5,44 @@ const gravity = 100
 const mouseSensitivity = 0.13
 const run_mod = 1.5
 
+var turnSpeed = 0.017
 var walkSpeed = 8
 var jumpForce = 10
 var camera_angle = 0
 var movement = Vector3()
 
 var tracked_movement = 0.0
-var max_tracked_movement = 4000.0
+var max_tracked_movement = 10000.0
 
+var rotateMode = false
+var isTurning = false
 
 func _physics_process(delta):
 	var input = Vector3()
 	
 	if Input.is_action_pressed("left"):
-		rotate_y(0.017)
-	if Input.is_action_pressed("right"):
-		rotate_y(-0.017)
+		rotate_y(turnSpeed)
+		isTurning = true
+	elif Input.is_action_pressed("right"):
+		rotate_y(-turnSpeed)
+		isTurning = true
+	else:
+		isTurning = false
 	
-	if Input.is_action_pressed("forward"):
-		input.x = 1
-	if Input.is_action_pressed("back"):
-		input.x = -1
-#	if Input.is_action_pressed("left"):
-#		input.z = -1
-#	if Input.is_action_pressed("right"):
-#		input.z = 1
+	if rotateMode:
+		if Input.is_action_pressed("forward"):
+			changeVerticalCamAngle(turnSpeed * 40.0)
+		if Input.is_action_pressed("back"):
+			changeVerticalCamAngle(-turnSpeed * 40.0)
+	elif !isTurning:
+		if Input.is_action_pressed("forward"):
+			input.x = 1
+		if Input.is_action_pressed("back"):
+			input.x = -1
+#		if Input.is_action_pressed("left"):
+#			input.z = -1
+#		if Input.is_action_pressed("right"):
+#			input.z = 1
 	
 	movement = input.rotated(Vector3.UP, rotation.y).normalized()
 	
@@ -49,6 +62,9 @@ func _physics_process(delta):
 		max_movement_exceeded()
 
 func _input(event):
+	if event.is_action_pressed("rotateMode"):
+		rotateMode = !rotateMode
+		resetCamAngle()
 	pass
 #	if event is InputEventMouseMotion:
 #		rotate_y(deg2rad(-event.relative.x * mouseSensitivity))
@@ -58,6 +74,14 @@ func _input(event):
 #			$Head/Camera.rotate_z(deg2rad(change))
 #			camera_angle += change
 
+func changeVerticalCamAngle(change):
+		if change + camera_angle < 90 and change + camera_angle > -90:
+			$Head/Camera.rotate_z(deg2rad(change))
+			camera_angle += change
+
+func resetCamAngle():
+	$Head/Camera.rotation_degrees = Vector3(0, -90, 0)
+	camera_angle = 0
 
 func max_movement_exceeded():
 	get_tree().reload_current_scene()
