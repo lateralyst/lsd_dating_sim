@@ -7,7 +7,7 @@ const run_mod = 1.5
 
 var turnSpeed = 0.017
 var walkSpeed = 8
-var jumpForce = 10
+var jumpForce = 30
 var camera_angle = 0
 var movement = Vector3()
 
@@ -17,7 +17,13 @@ var max_tracked_movement = 10000.0
 var rotateMode = false
 var isTurning = false
 
+var canInteract = false
+var interactionTarget
+
 func _physics_process(delta):
+	move(delta)
+
+func move(delta):
 	var input = Vector3()
 	
 	if Input.is_action_pressed("left"):
@@ -47,7 +53,6 @@ func _physics_process(delta):
 	movement = input.rotated(Vector3.UP, rotation.y).normalized()
 	
 	if is_on_floor() && Input.is_action_just_pressed("jump"):
-		print("jumped")
 		movement.y += jumpForce
 	
 	if !is_on_floor():
@@ -65,6 +70,12 @@ func _input(event):
 	if event.is_action_pressed("rotateMode"):
 		rotateMode = !rotateMode
 		resetCamAngle()
+	elif event.is_action_pressed("interact"):
+		if canInteract and interactionTarget != null:
+			print("interacting with " + interactionTarget.get_name() + "...")
+			interactionTarget.call("interact")
+		else:
+			print("no interaction target nearby")
 	pass
 #	if event is InputEventMouseMotion:
 #		rotate_y(deg2rad(-event.relative.x * mouseSensitivity))
@@ -86,4 +97,15 @@ func resetCamAngle():
 func max_movement_exceeded():
 	get_tree().reload_current_scene()
 	pass
+
+func _on_area2d_body_entered(body, obj):
+	if body.get_name() == "Player":
+		canInteract = true
+		interactionTarget = obj
+
+func _on_area2d_body_exited(body, obj):
+	if body.get_name() == "Player":
+		canInteract = false
+		interactionTarget = null
+
 

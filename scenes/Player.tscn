@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
+[ext_resource path="res://scenes/PlayerUtils.gd" type="Script" id=3]
+[ext_resource path="res://scenes/GameManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 radius = 0.64
@@ -30,3 +33,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0 )
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 0, 0, 0 )
 environment = ExtResource( 2 )
 far = 400.0
+
+[node name="PlayerUtils" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="GameManager" parent="." instance=ExtResource( 4 )]
+
+[node name="UI" parent="." instance=ExtResource( 5 )]
