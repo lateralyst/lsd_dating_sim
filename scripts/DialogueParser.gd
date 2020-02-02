@@ -83,7 +83,7 @@ func parseDia(path, fileName):
 				
 				dialogues[id].id = id
 				dialogues[id].sequence.append(DiaEntry.new(args[2]))
-				print("Dialogue %s sequence: %s" % [id, dialogues[id].sequence[0].text])
+#				print("Dialogue %s sequence: %s" % [id, dialogues[id].sequence[0].text])
 			
 			elif line_type == "choice":
 				if args.size() > 3:

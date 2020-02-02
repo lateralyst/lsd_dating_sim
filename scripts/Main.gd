@@ -1,18 +1,24 @@
 extends Node
 
-onready var pause_menu = get_node("../../UI/CanvasLayer/Pause Menu")
-onready var post_p = get_node("../../UI/CanvasLayer/Post-Processing")
+var pause_menu
+var post_p
 
 func _ready():
-#	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	var ui = get_tree().get_nodes_in_group("UI")
+	for i in ui:
+		if i.get_name() == "Pause Menu":
+			pause_menu = i
+		if i.get_name() == "Post-Processing":
+			post_p = i
+
 	pause_menu.visible = false
 	post_p.visible = true
+	
 	OS.window_size = Vector2(800, 600)
 	pass
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		pause_menu.visible = !pause_menu.visible
 		get_tree().paused = !get_tree().paused
 	
@@ -26,3 +32,5 @@ func _input(event):
 #		var scene = load("res://Room.tscn")
 		get_tree().change_scene("res://Room.tscn")
 		print("switched scene to room")
+
+

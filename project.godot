@@ -19,6 +19,11 @@ config/name="lsd_dating_sim"
 run/main_scene="res://scenes/World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameManager="*res://scenes/GameManager.tscn"
+UI="*res://scenes/UI.tscn"
+
 [display]
 
 window/size/width=640

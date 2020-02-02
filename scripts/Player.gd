@@ -17,11 +17,13 @@ var max_tracked_movement = 10000.0
 var rotateMode = false
 var isTurning = false
 
+var canMove = true
 var canInteract = false
 var interactionTarget
 
 func _physics_process(delta):
-	move(delta)
+	if canMove:
+		move(delta)
 
 func move(delta):
 	var input = Vector3()
@@ -75,6 +77,12 @@ func _input(event):
 			print("interacting with " + interactionTarget.get_name() + "...")
 			if interactionTarget.has_method("interact"):
 				interactionTarget.call("interact")
+				
+				if interactionTarget.has_method("is_dialogue_ongoing"):
+					if interactionTarget.is_dialogue_ongoing():
+						canMove = false
+					else:
+						canMove = true
 			else:
 				print("error: interactionTarget has no interact() function")
 		else:

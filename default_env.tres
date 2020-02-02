@@ -10,6 +10,5 @@ fog_enabled = true
 fog_color = Color( 0.686275, 0.776471, 0.866667, 1 )
 fog_sun_color = Color( 1, 1, 1, 1 )
 fog_depth_begin = 40.0
-fog_depth_end = 100.0
 fog_height_max = 2.0
 fog_height_curve = 1.36604
