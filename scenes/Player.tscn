@@ -12,7 +12,9 @@ mid_height = 1.5
 radius = 0.8
 height = 2.0
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
 script = ExtResource( 1 )
 
 [node name="Capsule" type="MeshInstance" parent="."]

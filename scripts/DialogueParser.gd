@@ -8,7 +8,7 @@ class Dialogue:
 class DiaEntry:
 	var text = ""
 	var choices = []
-	var condition = ""
+	var conditions = []
 	
 	func _init(txt):
 		text = txt
@@ -38,6 +38,7 @@ func parseDia(path, fileName):
 	var dialogue = Dialogue.new()
 	var line = null
 	var id = null
+	var conditions = []
 	var lineNum = 0
 	
 	var file = File.new()
@@ -50,6 +51,8 @@ func parseDia(path, fileName):
 		
 		if line == "":
 			continue
+		
+		line = line.dedent() # remove whitespace at beginning
 		
 		if line[0] == "#":
 			line.erase(0, 1)
@@ -106,9 +109,28 @@ func parseDia(path, fileName):
 					break
 				
 				var entry = DiaEntry.new(args[1])
-#				entry.condition = ""
+				if conditions:
+					entry.conditions.append(conditions[conditions.size() - 1]) # only the latest cond
 				
 				dialogues[id].sequence.append(entry)
+			
+			elif line_type == "if":
+				if args.size() < 2:
+					print("critical: too few args in line %s: " % lineNum + originalLine)
+					break
+				
+				var a = ""
+				for i in args.size():
+					if i > 0:
+						if i < args.size() - 1:
+							a += "%s " % args[i]
+						else:
+							a += "%s" % args[i]
+				
+				conditions.append(a)
+			
+			elif line_type == "end":
+				conditions.remove(conditions.size() - 1)
 			
 			else:
 				print("line %s could not be parsed (%s)" % [lineNum, originalLine])
@@ -145,6 +167,11 @@ func next_block(s):
 		result = result.lstrip(" ")
 		return [result, ""]
 	
+#	var condCharacters = [">", "<", "="]
+#	for c in condCharacters:
+#		if s.match(c) and s.find(c) < 3:
+			
+	
 	var nextquote = s.find('"')
 	var secondquote = s.find('"', nextquote + 1)
 	var spaceAfterNextWord = s.find(" ")
@@ -180,8 +207,10 @@ func printDialogues():
 			print("  Entry %s:\n    text: %s\n    choices:" % [i, entry.text])
 			for choice in entry.choices:
 				print("      %s => %s" % [choice.text, choice.conseq])
-				
-			# TODO: print conditions
+			
+			print("    conditions:")
+			for cond in entry.conditions:
+				print("      %s" % cond)
 			i += 1
 
 

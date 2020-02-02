@@ -3,14 +3,27 @@
 #start dia1 "How ya doin?"
 
 #choice "Fine." > a = 1
-#choice "Bad." > a = 2
+#choice "Horrible." > a = 2
 
 #if a == 1
-#cont "That's good then."
+    #cont "That's good then."
+    #cont "I've been doing fine too lately."
 #end
 
 #if a == 2
-#cont "Damn. Somethin happen?"
+    #cont "Damn. Somethin happen?"
+
+    #choice "Nah." > a = 3
+    #choice "Yeah, but it's personal." > a = 4
+
+    #if a == 3
+        #cont "I guess we all just feel bad sometimes."
+    #end
+
+    #if a == 4
+        #cont "You can tell me anything."
+        #cont "Though if you don't want to, that's okay."
+    #end
 #end
 
 #cont "Anyway, what didya want from me?"

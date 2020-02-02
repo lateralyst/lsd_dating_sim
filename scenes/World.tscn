@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://image/bushman.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Sprite3D2.gd" type="Script" id=5]
 [ext_resource path="res://image/711.png" type="Texture" id=6]
@@ -55,11 +54,6 @@ shape = SubResource( 1 )
 [node name="FloorMesh" type="MeshInstance" parent="Floor2/CollisionShape"]
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
-
-[node name="Player" parent="." groups=[
-"Player",
-] instance=ExtResource( 3 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 
 [node name="Spatial" type="Spatial" parent="."]
 
@@ -1637,3 +1631,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.4466, 0.0985985, 24.5387 )
 
 [node name="houseP4" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.9, 0, -1.35896e-07, 0, 0.9, 0, 1.35896e-07, 0, -0.9, 66.8703, 0, 25.3509 )
+
+[node name="Spawn" type="Spatial" parent="." groups=[
+"Spawn",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.322972, 0 )

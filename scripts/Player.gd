@@ -21,6 +21,12 @@ var canMove = true
 var canInteract = false
 var interactionTarget
 
+func _ready():
+	var spawn = get_tree().get_nodes_in_group("Spawn")[0]
+	
+	if spawn != null:
+		translation = spawn.translation
+
 func _physics_process(delta):
 	if canMove:
 		move(delta)

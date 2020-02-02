@@ -1,6 +1,9 @@
 extends Node
 
 func _ready():
+	init_interactboxes()
+
+func init_interactboxes():
 	var player = get_parent()
 	var interactables = get_tree().get_nodes_in_group("interactable")
 	for i in range(interactables.size()):
