@@ -110,7 +110,8 @@ func parseDia(path, fileName):
 				
 				var entry = DiaEntry.new(args[1])
 				if conditions:
-					entry.conditions.append(conditions[conditions.size() - 1]) # only the latest cond
+#					entry.conditions.append(conditions[conditions.size() - 1]) # only the latest cond
+					entry.conditions = [] + conditions
 				
 				dialogues[id].sequence.append(entry)
 			
@@ -199,6 +200,7 @@ func next_block(s):
 #	print("s = " + s)
 	return [result, s]
 
+
 func printDialogues():
 	for dia in dialogues:
 		print("Dialogue %s:" % dia)
@@ -212,6 +214,88 @@ func printDialogues():
 			for cond in entry.conditions:
 				print("      %s" % cond)
 			i += 1
+
+
+func parse_conseq(conseq, diaId):
+	conseq.lstrip(" ")
+	conseq.rstrip(" ")
+	
+	var key = conseq[0]
+	var value = int(conseq[conseq.length() - 1])
+	
+	if value == 0:
+		print("warning: value of conseq \"%s\" is 0." % conseq)
+	
+	var vars = dialogues[diaId].variables
+	
+	if conseq.find("=") != -1:
+		vars[key] = value
+	
+	elif conseq.find("+") != -1:
+		if vars.has(key):
+			vars[key] += value
+		else:
+			print("error: tried to add value to non-existent key %s" % key)
+	
+	elif conseq.find("-") != -1:
+		if vars.has(key):
+			vars[key] -= value
+		else:
+			print("error: tried to subtract value from non-existent key %s" % key)
+	
+	else:
+		print("error: couldn't find operator in conseq")
+	
+	print("Parsed conseq %s. variables[%s] is now %s" % [conseq, key, dialogues[diaId].variables[key]])
+
+
+func validate_condition(cond, diaId):
+	var result = false
+	cond.lstrip(" ")
+	cond.rstrip(" ")
+	
+	var key = cond[0]
+	var value = int(cond[cond.length() - 1])
+	
+	if value == 0:
+		print("warning: value of cond \"%s\" is 0." % cond)
+	
+	if dialogues[diaId].variables.has(key):
+		if cond.find("==") != -1:
+			if dialogues[diaId].variables[key] == value:
+				result = true
+		elif cond.find("!=") != -1:
+			if dialogues[diaId].variables[key] != value:
+				result = true
+		elif cond.find(">") != -1:
+			if dialogues[diaId].variables[key] > value:
+				result = true
+		elif cond.find(">=") != -1:
+			if dialogues[diaId].variables[key] >= value:
+				result = true
+		elif cond.find("<") != -1:
+			if dialogues[diaId].variables[key] < value:
+				result = true
+		elif cond.find("<=") != -1:
+			if dialogues[diaId].variables[key] <= value:
+				result = true
+	else:
+		print("error: condition operator not found.")
+	
+	return result
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

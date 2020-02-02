@@ -83,12 +83,6 @@ func _input(event):
 			print("interacting with " + interactionTarget.get_name() + "...")
 			if interactionTarget.has_method("interact"):
 				interactionTarget.call("interact")
-				
-				if interactionTarget.has_method("is_dialogue_ongoing"):
-					if interactionTarget.is_dialogue_ongoing():
-						canMove = false
-					else:
-						canMove = true
 			else:
 				print("error: interactionTarget has no interact() function")
 		else:

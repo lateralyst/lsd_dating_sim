@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://image/cool tree/coolERgrass.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Dialogue.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Sprite3D2.gd" type="Script" id=3]
+
+[sub_resource type="SphereShape" id=1]
+radius = 5.23244
+
+[node name="TalkingGrass" type="Spatial" groups=[
+"interactable",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54692, 0.549763, -3.17037 )
+script = ExtResource( 2 )
+dialogueId = "dia1"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+offset = Vector2( 0, 6 )
+pixel_size = 0.05
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )

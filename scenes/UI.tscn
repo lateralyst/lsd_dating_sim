@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://image/rocksks.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Pause Menu.gd" type="Script" id=2]
-[ext_resource path="res://fonts/button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/pause_menu_button_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/Minecraft.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scripts/ProgressBar.gd" type="Script" id=5]
 [ext_resource path="res://shaders/post-processing.shader" type="Shader" id=6]
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -76,20 +79,19 @@ flat = true
 align = 0
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer"]
-margin_left = 480.0
-margin_top = 410.0
-margin_right = 617.0
-margin_bottom = 461.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 479.0
+margin_top = 53.7616
+margin_right = 616.0
+margin_bottom = 104.762
+custom_fonts/font = SubResource( 6 )
 text = "2020/01/30
 15:27:24"
 align = 2
-valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Subtitles" type="Label" parent="CanvasLayer"]
+[node name="Subtitles" type="Button" parent="CanvasLayer"]
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
@@ -102,9 +104,27 @@ margin_bottom = -81.0146
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.866667, 0.866667, 0.866667, 1 )
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
 text = "Hello, I am here to help you."
-align = 1
-valign = 2
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueChoices" type="HBoxContainer" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -159.0
+margin_top = -40.0
+margin_right = 159.0
+margin_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 50
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -114,15 +134,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 190.0
+margin_left = 195.119
 margin_top = -220.0
-margin_right = 290.0
+margin_right = 295.119
 margin_bottom = -195.0
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.45098, 0.45098, 0.45098, 1 )
 value = 80.0
+percent_visible = false
 script = ExtResource( 5 )
 
 [node name="Post-Processing" type="ColorRect" parent="CanvasLayer" groups=[

@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
+[ext_resource path="res://scenes/minor/TalkingGrass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://image/bushman.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Sprite3D2.gd" type="Script" id=5]
 [ext_resource path="res://image/711.png" type="Texture" id=6]
@@ -1636,3 +1637,6 @@ transform = Transform( -0.9, 0, -1.35896e-07, 0, 0.9, 0, 1.35896e-07, 0, -0.9, 6
 "Spawn",
 ]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.322972, 0 )
+
+[node name="TalkingGrass" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63657, -0.0481198, -0.112229 )
