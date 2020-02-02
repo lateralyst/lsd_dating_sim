@@ -1,0 +1,16 @@
+#language "en"
+
+#start dia1 "How ya doin?"
+
+#choice "Fine." > a = 1
+#choice "Bad." > a = 2
+
+#if a == 1
+#cont "That's good then."
+#end
+
+#if a == 2
+#cont "Damn. Somethin happen?"
+#end
+
+#cont "Anyway, what didya want from me?"

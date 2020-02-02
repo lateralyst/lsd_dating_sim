@@ -73,7 +73,10 @@ func _input(event):
 	elif event.is_action_pressed("interact"):
 		if canInteract and interactionTarget != null:
 			print("interacting with " + interactionTarget.get_name() + "...")
-			interactionTarget.call("interact")
+			if interactionTarget.has_method("interact"):
+				interactionTarget.call("interact")
+			else:
+				print("error: interactionTarget has no interact() function")
 		else:
 			print("no interaction target nearby")
 	pass
