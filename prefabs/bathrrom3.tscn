@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.64475, 0.001, 3.90184 )
 
-[node name="bathrrom3" index="0" instance=ExtResource( 1 )]
+[node name="bathrrom3" instance=ExtResource( 1 )]
 
 [node name="Cube" parent="." index="0"]
 material/0 = ExtResource( 2 )

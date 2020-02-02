@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -13,6 +13,10 @@
 [ext_resource path="res://prefabs/mudgrass.tscn" type="PackedScene" id=11]
 [ext_resource path="res://prefabs/mudbush.tscn" type="PackedScene" id=12]
 [ext_resource path="res://prefabs/houseP3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://prefabs/ISLE.tscn" type="PackedScene" id=14]
+[ext_resource path="res://prefabs/sewsew.tscn" type="PackedScene" id=15]
+[ext_resource path="res://prefabs/sewsew2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://prefabs/grave1.tscn" type="PackedScene" id=17]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -1641,3 +1645,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.4466, 0.0985985, 24.5387 )
 
 [node name="houseP4" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.9, 0, -1.35896e-007, 0, 0.9, 0, 1.35896e-007, 0, -0.9, 66.8703, 0, 25.3509 )
+
+[node name="ISLE" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.5814, 6 )
+
+[node name="sewsew" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.458002, 0, 0.888951, 0, 1, 0, -0.888951, 0, 0.458002, -62.5753, -0.0558929, -24.8938 )
+
+[node name="sewsew2" parent="." instance=ExtResource( 16 )]
+transform = Transform( 0.457998, 0, 0.888953, 0, 1, 0, -0.888953, 0, 0.457998, -62.575, -0.056, 0 )
+
+[node name="grave1" parent="." instance=ExtResource( 17 )]
+transform = Transform( 0.496443, 0, 0.0595335, 0, 0.5, 0, -0.0595335, 0, 0.496443, -15.404, 0, 2.7133 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+visible = false
+bake_cell_size = 20.29
+bake_energy = 0.4
+capture_cell_size = 54.79
