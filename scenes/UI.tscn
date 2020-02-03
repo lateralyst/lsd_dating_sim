@@ -7,23 +7,23 @@
 [ext_resource path="res://scripts/ProgressBar.gd" type="Script" id=5]
 [ext_resource path="res://shaders/post-processing.shader" type="Shader" id=6]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.92549, 0.92549, 0.92549, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 4 )
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=6]
 shader = ExtResource( 6 )
 shader_param/scanline_count = 240.0
 shader_param/scanline_visibility = 0.31
@@ -83,7 +83,7 @@ margin_left = 479.0
 margin_top = 53.7616
 margin_right = 616.0
 margin_bottom = 104.762
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 text = "2020/01/30
 15:27:24"
 align = 2
@@ -103,7 +103,7 @@ margin_right = 162.974
 margin_bottom = -81.0146
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 0.866667, 0.866667, 0.866667, 1 )
 custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
 text = "Hello, I am here to help you."
@@ -138,9 +138,9 @@ margin_left = 195.119
 margin_top = -220.0
 margin_right = 295.119
 margin_bottom = -195.0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.45098, 0.45098, 0.45098, 1 )
 value = 80.0
 percent_visible = false
@@ -150,7 +150,7 @@ script = ExtResource( 5 )
 "UI",
 ]]
 visible = false
-material = SubResource( 5 )
+material = SubResource( 6 )
 margin_left = 0.340576
 margin_right = 640.341
 margin_bottom = 480.0

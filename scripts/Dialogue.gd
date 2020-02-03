@@ -35,7 +35,7 @@ func _ready():
 	if diaSubtitle == null:
 		print("DIALOGUE UI IS NULL")
 	else:
-		diaSubtitle.connect("pressed", self, "_on_subtitle_pressed")
+		pass
 		
 	if player == null:
 		print("PLAYER IS NULL")
@@ -82,6 +82,7 @@ func progress(choice = null):
 	if foundValidEntry and dEntry != null:
 		dialogueOngoing = true
 		player.canMove = false
+		diaSubtitle.connect("pressed", self, "_on_subtitle_pressed")
 		
 		var text = dEntry.text
 		print("text: " + text)
@@ -104,6 +105,7 @@ func progress(choice = null):
 	else:
 		dialogueOngoing = false
 		player.canMove = true
+		diaSubtitle.disconnect("pressed", self, "_on_subtitle_pressed")
 		diaSubtitle.visible = false
 		condImmunities = []
 		diaPos = 0
@@ -111,7 +113,7 @@ func progress(choice = null):
 		print("No more dialogue entries")
 
 func _on_choice_button_pressed(choice):
-	print("Choice: \"%s\"; Conseq: %s" % [choice.text, choice.conseq])
+#	print("Choice: \"%s\"; Conseq: %s" % [choice.text, choice.conseq])
 	
 	for cb in choiceButtons:
 		cb.remove_and_skip()

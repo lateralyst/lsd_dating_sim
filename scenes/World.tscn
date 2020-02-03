@@ -483,9 +483,10 @@ transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.29241, 0, -15.4923 )
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 2.29241, 0, -39.2553 )
 
 [node name="Tree86" parent="Trees" instance=ExtResource( 10 )]
-transform = Transform( 3.114, 0, 0, 0, 3.144, 0, 0, 0, 3.107, -22.6595, 0, -10.7269 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6595, 0, -10.7269 )
 
 [node name="Dialogue" parent="Trees/Tree86" instance=ExtResource( 18 )]
+dialogueId = "dia1"
 
 [node name="Tree37" parent="Trees" instance=ExtResource( 10 )]
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -9.66705, 0, -30.9616 )
