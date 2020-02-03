@@ -6,13 +6,13 @@ const mouseSensitivity = 0.13
 const run_mod = 1.5
 
 var turnSpeed = 0.017
-var walkSpeed = 8
+var walkSpeed = 5
 var jumpForce = 30
 var camera_angle = 0
 var movement = Vector3()
 
 var tracked_movement = 0.0
-var max_tracked_movement = 10000.0
+var max_tracked_movement = 100000.0
 
 var rotateMode = false
 var isTurning = false
