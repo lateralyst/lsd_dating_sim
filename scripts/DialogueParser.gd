@@ -82,6 +82,10 @@ func parseDia(path, fileName):
 					break
 				
 				id = args[1]
+				
+				if dialogues.has(id):
+					print("error: multiple dialogues with the name %s. the first will be overwritten." % id)
+				
 				dialogues[id] = Dialogue.new()
 				
 				dialogues[id].id = id
@@ -213,6 +217,8 @@ func printDialogues():
 			print("    conditions:")
 			for cond in entry.conditions:
 				print("      %s" % cond)
+			
+			print(" ")
 			i += 1
 
 

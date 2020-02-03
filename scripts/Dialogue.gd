@@ -27,11 +27,10 @@ func _ready():
 	if parser == null:
 		print("PARSER IS NULL")
 	else:
-		dia = parser.dialogues[dialogueId]
-		if dia == null:
-			print("DIALOGUE IS NULL (%s)" % dialogueId)
+		if parser.dialogues.has(dialogueId):
+			dia = parser.dialogues[dialogueId]
 		else:
-			print("Dialogue %s successfully loaded" % dialogueId)
+			print("DIALOGUE IS NULL (%s)" % dialogueId)
 	
 	if diaSubtitle == null:
 		print("DIALOGUE UI IS NULL")
@@ -49,6 +48,10 @@ func is_dialogue_ongoing():
 	return dialogueOngoing
 
 func progress(choice = null):
+	if dia == null:
+		print("error: could not progress. dia is null.")
+		return
+	
 	if choice != null:
 		parser.parse_conseq(choice.conseq, dialogueId)
 	elif dEntry != null and dEntry.choices.size() > 0:
