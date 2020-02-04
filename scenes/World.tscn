@@ -16,9 +16,9 @@
 [ext_resource path="res://prefabs/ISLE.tscn" type="PackedScene" id=14]
 [ext_resource path="res://prefabs/sewsew.tscn" type="PackedScene" id=15]
 [ext_resource path="res://prefabs/sewsew2.tscn" type="PackedScene" id=16]
-[ext_resource path="res://sewer2.tscn" type="PackedScene" id=17]
-[ext_resource path="res://prefabs/grave1.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/minor/TalkingGrass.tscn" type="PackedScene" id=19]
+[ext_resource path="res://prefabs/grave1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/minor/TalkingGrass.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sewertest.tscn" type="PackedScene" id=19]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -63,6 +63,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Spatial" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Sprite3D" type="Sprite3D" parent="Spatial"]
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24.0447, 0, 14.1834 )
@@ -347,6 +348,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Mudland" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="dude" type="Sprite3D" parent="Mudland"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9615, 0, 19.7447 )
@@ -367,6 +369,7 @@ transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 3.67146, 0, -43.3166 )
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.40988, 0, -43.3166 )
 
 [node name="Trees" type="Spatial" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.911, 0, 0 )
 
 [node name="Tree" parent="Trees" instance=ExtResource( 9 )]
@@ -634,6 +637,7 @@ transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 29.3726, 0, -41.8665 )
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 22.5747, 0, -34.4167 )
 
 [node name="Grass" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Grass369" parent="Grass" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3667, 0, -24.6028 )
@@ -1590,6 +1594,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.7693, 0, 25.9116 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4626, 0, -19.5623 )
 
 [node name="Bushes" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Bush" parent="Bushes" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.0644, 0.0985985, 23.5551 )
@@ -1651,10 +1656,7 @@ transform = Transform( 0.458002, 0, 0.888951, 0, 1, 0, -0.888951, 0, 0.458002, -
 [node name="sewsew2" parent="." instance=ExtResource( 16 )]
 transform = Transform( 0.457998, 0, 0.888953, 0, 1, 0, -0.888953, 0, 0.457998, -62.575, -0.056, 0 )
 
-[node name="sewer2" parent="sewsew2" instance=ExtResource( 17 )]
-transform = Transform( 0.995662, 0, 0.0930414, 0, 1, 0, -0.0930414, 0, 0.995662, -25.5226, -0.056, 13.7623 )
-
-[node name="grave1" parent="." instance=ExtResource( 18 )]
+[node name="grave1" parent="." instance=ExtResource( 17 )]
 transform = Transform( 0.496443, 0, 0.0595335, 0, 0.5, 0, -0.0595335, 0, 0.496443, -15.404, 0, 2.7133 )
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
@@ -1663,5 +1665,8 @@ bake_cell_size = 20.29
 bake_energy = 0.4
 capture_cell_size = 54.79
 
-[node name="TalkingGrass" parent="." instance=ExtResource( 19 )]
+[node name="TalkingGrass" parent="." instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26472, 0.0985186, 0.15349 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 0.373302, 0, 0.927709, 0, 1, 0, -0.927709, 0, 0.373302, -62.03, -0.112, 28.991 )
