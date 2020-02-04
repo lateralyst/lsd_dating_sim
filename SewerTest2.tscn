@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SewerCons.tscn" type="PackedScene" id=1]
+
+[node name="SewerSystem" type="Spatial"]
+
+[node name="SewerCons" parent="." instance=ExtResource( 1 )]
