@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.s3tc.stex"
-path.etc="res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.etc.stex"
+path.s3tc="res://.import/sewerst2.png-deb27f3c8d7f5f585dc7e34ff7c84320.s3tc.stex"
+path.etc="res://.import/sewerst2.png-deb27f3c8d7f5f585dc7e34ff7c84320.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,19 +11,19 @@ metadata={
 
 [deps]
 
-source_file="res://prefabs/sewerenterance.png"
-dest_files=[ "res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.s3tc.stex", "res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.etc.stex" ]
+source_file="res://prefabs/sewerst2.png"
+dest_files=[ "res://.import/sewerst2.png-deb27f3c8d7f5f585dc7e34ff7c84320.s3tc.stex", "res://.import/sewerst2.png-deb27f3c8d7f5f585dc7e34ff7c84320.etc.stex" ]
 
 [params]
 
 compress/mode=2
-compress/lossy_quality=0.7
+compress/lossy_quality=0.13
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
 flags/filter=false
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

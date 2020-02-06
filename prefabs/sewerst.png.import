@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.s3tc.stex"
-path.etc="res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.etc.stex"
+path.s3tc="res://.import/sewerst.png-fd15cd7df0d88459bab3a2de8bc050b7.s3tc.stex"
+path.etc="res://.import/sewerst.png-fd15cd7df0d88459bab3a2de8bc050b7.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://prefabs/sewerenterance.png"
-dest_files=[ "res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.s3tc.stex", "res://.import/sewerenterance.png-68d1238da614bc6754688416610e5bc7.etc.stex" ]
+source_file="res://prefabs/sewerst.png"
+dest_files=[ "res://.import/sewerst.png-fd15cd7df0d88459bab3a2de8bc050b7.s3tc.stex", "res://.import/sewerst.png-fd15cd7df0d88459bab3a2de8bc050b7.etc.stex" ]
 
 [params]
 

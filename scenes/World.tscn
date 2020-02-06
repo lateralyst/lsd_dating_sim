@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -30,12 +30,22 @@ albedo_texture = ExtResource( 2 )
 metallic = 0.58
 metallic_specular = 0.0
 
+[sub_resource type="ProceduralSky" id=5]
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 5 )
+ambient_light_color = Color( 0.921569, 0.878431, 0.878431, 1 )
+adjustment_brightness = 0.65
+adjustment_contrast = 1.26
+adjustment_saturation = 8.0
+
 [node name="World" type="Spatial"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.848962, 0.511644, 0.132224, 0.30411, -0.67764, 0.669568, 0.432181, -0.528227, -0.730887, -6.05579, 19.2997, 0 )
+transform = Transform( -0.771002, 0.149924, 0.618933, -0.268466, 0.804793, -0.529371, -0.577478, -0.574309, -0.580248, -25.9742, 16.1471, 22.3296 )
 light_color = Color( 1, 0.964706, 0.67451, 1 )
-light_energy = 1.6
+light_energy = 1.12
 shadow_enabled = true
 shadow_color = Color( 0, 0.00784314, 0.113725, 1 )
 
@@ -62,10 +72,9 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="Spatial" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Sprite3D" type="Sprite3D" parent="Spatial"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24.0447, 0, 14.1834 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.0447, 0, 14.1834 )
 offset = Vector2( 0, 445 )
 pixel_size = 0.002
 alpha_cut = 1
@@ -83,7 +92,7 @@ texture = ExtResource( 5 )
 script = ExtResource( 4 )
 
 [node name="Tree4" type="Sprite3D" parent="Spatial"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -25.1166, 0, 15.6254 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.1166, 0, 15.6254 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
@@ -97,7 +106,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Sprite3D2" type="Sprite3D" parent="Spatial"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24.0447, 0, 7.7595 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.0447, 0, 7.7595 )
 offset = Vector2( 0, 445 )
 pixel_size = 0.002
 alpha_cut = 1
@@ -105,7 +114,7 @@ texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="Sprite3D3" type="Sprite3D" parent="Spatial"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -24.2643, 0, 5.6359 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.2643, 0, 5.6359 )
 offset = Vector2( 0, 445 )
 pixel_size = 0.002
 alpha_cut = 1
@@ -116,42 +125,42 @@ script = ExtResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.892, 0.1, 11.02 )
 
 [node name="Tree5" type="Sprite3D" parent="Spatial/TreeClump"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 3.6112, -0.1, 9.29214 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.6112, -0.1, 9.29214 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree" type="Sprite3D" parent="Spatial/TreeClump/Tree5"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree7" type="Sprite3D" parent="Spatial/TreeClump"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.32693, -0.1, 10.3361 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.32693, -0.1, 10.3361 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree2" type="Sprite3D" parent="Spatial/TreeClump/Tree7"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree6" type="Sprite3D" parent="Spatial/TreeClump"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 6.25063, -0.1, 10.0156 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.25063, -0.1, 10.0156 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree3" type="Sprite3D" parent="Spatial/TreeClump/Tree6"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
@@ -171,7 +180,7 @@ texture = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Tree" type="Sprite3D" parent="Spatial/TreeClump2/Tree5"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 2
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -191,7 +200,7 @@ texture = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Tree2" type="Sprite3D" parent="Spatial/TreeClump2/Tree7"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 2
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -211,7 +220,7 @@ texture = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Tree2" type="Sprite3D" parent="Spatial/TreeClump2/Tree8"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 2
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -231,7 +240,7 @@ texture = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Tree3" type="Sprite3D" parent="Spatial/TreeClump2/Tree6"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 2
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -244,7 +253,7 @@ script = ExtResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1802, 0.1, 21.4443 )
 
 [node name="Tree5" type="Sprite3D" parent="Spatial/TreeClump3"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 3.6112, -0.1, 9.29214 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.6112, -0.1, 9.29214 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -253,7 +262,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree" type="Sprite3D" parent="Spatial/TreeClump3/Tree5"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -262,21 +271,21 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree7" type="Sprite3D" parent="Spatial/TreeClump3"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.32693, -0.1, 10.3361 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.32693, -0.1, 10.3361 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree2" type="Sprite3D" parent="Spatial/TreeClump3/Tree7"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree6" type="Sprite3D" parent="Spatial/TreeClump3"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 6.25063, -0.1, 10.0156 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.25063, -0.1, 10.0156 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -285,7 +294,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree3" type="Sprite3D" parent="Spatial/TreeClump3/Tree6"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -297,7 +306,7 @@ texture = ExtResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7922, 0.1, 19.7276 )
 
 [node name="Tree5" type="Sprite3D" parent="Spatial/TreeClump4"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 3.6112, -0.1, 9.29214 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.6112, -0.1, 9.29214 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -306,21 +315,21 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree" type="Sprite3D" parent="Spatial/TreeClump4/Tree5"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree7" type="Sprite3D" parent="Spatial/TreeClump4"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 5.32693, -0.1, 10.3361 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.32693, -0.1, 10.3361 )
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
 alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree2" type="Sprite3D" parent="Spatial/TreeClump4/Tree7"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -329,7 +338,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree6" type="Sprite3D" parent="Spatial/TreeClump4"]
-transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 6.25063, -0.1, 10.0156 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.25063, -0.1, 10.0156 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -338,7 +347,7 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Tree3" type="Sprite3D" parent="Spatial/TreeClump4/Tree6"]
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 cast_shadow = 0
 offset = Vector2( 0, 874.08 )
 pixel_size = 0.002
@@ -347,7 +356,6 @@ alpha_cut = 1
 texture = ExtResource( 6 )
 
 [node name="Mudland" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="dude" type="Sprite3D" parent="Mudland"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.9615, 0, 19.7447 )
@@ -368,7 +376,6 @@ transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 3.67146, 0, -43.3166 )
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -3.40988, 0, -43.3166 )
 
 [node name="Trees" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.911, 0, 0 )
 
 [node name="Tree" parent="Trees" instance=ExtResource( 9 )]
@@ -636,7 +643,6 @@ transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 29.3726, 0, -41.8665 )
 transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 22.5747, 0, -34.4167 )
 
 [node name="Grass" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Grass369" parent="Grass" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3667, 0, -24.6028 )
@@ -1593,7 +1599,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.7693, 0, 25.9116 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4626, 0, -19.5623 )
 
 [node name="Bushes" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Bush" parent="Bushes" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.0644, 0.0985985, 23.5551 )
@@ -1644,19 +1649,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4524, 0.0985985, 33.2051 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.4466, 0.0985985, 24.5387 )
 
 [node name="houseP4" parent="." instance=ExtResource( 13 )]
-transform = Transform( -0.9, 0, -1.35896e-007, 0, 0.9, 0, 1.35896e-007, 0, -0.9, 66.8703, 0, 25.3509 )
+transform = Transform( -0.9, 0, -1.35896e-07, 0, 0.9, 0, 1.35896e-07, 0, -0.9, 66.8703, 0, 25.3509 )
 
 [node name="ISLE" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.5814, 6 )
 
 [node name="grave1" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.496443, 0, 0.0595335, 0, 0.5, 0, -0.0595335, 0, 0.496443, -15.404, 0, 2.7133 )
-
-[node name="BakedLightmap" type="BakedLightmap" parent="."]
-visible = false
-bake_cell_size = 20.29
-bake_energy = 0.4
-capture_cell_size = 54.79
 
 [node name="TalkingGrass" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26472, 0.0985186, 0.15349 )
@@ -1665,4 +1664,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26472, 0.0985186, 0.15349 )
 transform = Transform( 0.373302, 0, 0.927709, 0, 1, 0, -0.927709, 0, 0.373302, -62.03, -0.112, 28.991 )
 
 [node name="SewerSystem" parent="." instance=ExtResource( 18 )]
-transform = Transform( -0.95762, 0, 0.288034, 0, 1, 0, -0.288034, 0, -0.95762, -23.3513, -0.112, 58.7587 )
+transform = Transform( -0.95762, 0, 0.288034, 0, 1, 0, -0.288034, 0, -0.95762, -32.2933, 0.0117922, 58.0464 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
