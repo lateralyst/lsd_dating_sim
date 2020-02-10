@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://prefabs/Bricks Big stack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/constuction zone/bricks/birckpile.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 0.001, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Big stack" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.419283, 0, 0.2724, 0, 0.5, 0, -0.2724, 0, 0.419283, -4.03297, 0, -10.2769 )
+
+[node name="Pile" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.15919, 0, 0.473982, 0, 0.5, 0, -0.473982, 0, -0.15919, -8.94291, 0, 4.25839 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.797219, -0.264948, 0.542444, -0.0113291, 0.891821, 0.452246, -0.603584, -0.366684, 0.707975, 0, 8.52072, 0 )
+visible = false
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 25, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 0 )
+visible = false
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody/CollisionShape"]
+visible = false
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -20,8 +20,21 @@
 [ext_resource path="res://SewerTest2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://prefabs/Sewers/SewerConsBlue.tscn" type="PackedScene" id=19]
 [ext_resource path="res://prefabs/Sewers/SewerConAmerican.tscn" type="PackedScene" id=20]
-[ext_resource path="res://prefabs/constuction zone/bricks/birckpile.tscn" type="PackedScene" id=21]
-[ext_resource path="res://prefabs/Bricks Big stack.tscn" type="PackedScene" id=22]
+[ext_resource path="res://lessdark.tscn" type="PackedScene" id=21]
+[ext_resource path="res://ISLEvdraw.tscn" type="PackedScene" id=22]
+[ext_resource path="res://DARKER.tscn" type="PackedScene" id=23]
+[ext_resource path="res://ConstructionZone.tscn" type="PackedScene" id=24]
+[ext_resource path="res://conshouse.tscn" type="PackedScene" id=25]
+[ext_resource path="res://bricksground.tscn" type="PackedScene" id=26]
+[ext_resource path="res://image/sun1.png" type="Texture" id=27]
+[ext_resource path="res://image/sun2.png" type="Texture" id=28]
+[ext_resource path="res://image/sun6.png" type="Texture" id=29]
+[ext_resource path="res://image/sun7.png" type="Texture" id=30]
+[ext_resource path="res://image/sun4.png" type="Texture" id=31]
+[ext_resource path="res://image/sun5.png" type="Texture" id=32]
+[ext_resource path="res://image/sun8.png" type="Texture" id=33]
+[ext_resource path="res://image/sun3.png" type="Texture" id=34]
+[ext_resource path="res://flatlanderD.tscn" type="PackedScene" id=35]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -35,24 +48,29 @@ metallic = 0.58
 metallic_specular = 0.0
 
 [sub_resource type="ProceduralSky" id=4]
+sun_latitude = -180.0
 
 [sub_resource type="Environment" id=5]
 background_mode = 2
 background_sky = SubResource( 4 )
 ambient_light_color = Color( 0.921569, 0.878431, 0.878431, 1 )
-adjustment_brightness = 0.65
-adjustment_contrast = 2.84
+adjustment_brightness = 0.82
+adjustment_contrast = 1.44
+adjustment_saturation = 2.4
 
-[sub_resource type="BoxShape" id=6]
-extents = Vector3( 30.0458, 0.001, 29.7391 )
-
-[sub_resource type="PlaneMesh" id=7]
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
 
 [node name="World" type="Spatial"]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.136577, -0.643057, 0.753541, 0.52988, 0.690127, 0.492901, -0.837003, 0.331968, 0.434999, -25.9742, 16.1471, 22.3296 )
-light_color = Color( 1, 0.964706, 0.67451, 1 )
+transform = Transform( 0.322251, -0.701454, 0.635701, 0.52988, 0.690127, 0.492901, -0.784462, 0.178007, 0.594081, -25.9742, 16.1471, 22.3296 )
+light_color = Color( 1, 0.988235, 0.901961, 1 )
 shadow_enabled = true
 
 [node name="Spatial" type="Spatial" parent="."]
@@ -1684,25 +1702,47 @@ transform = Transform( 0.496443, 0, 0.0595335, 0, 0.5, 0, -0.0595335, 0, 0.49644
 
 [node name="ISLE" parent="Middle Area" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.5814, 6 )
+visible = false
+
+[node name="ISLEvdraw" parent="Middle Area" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.581, 6 )
+visible = false
+
+[node name="DARKER" parent="Middle Area" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.581, 6 )
+visible = false
+
+[node name="lessdark" parent="Middle Area" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -16.581, 6 )
+
+[node name="Spatial2" parent="Middle Area" instance=ExtResource( 26 )]
+transform = Transform( 0.255714, 0, 0.429663, 0, 0.5, 0, -0.429663, 0, 0.255714, 7.66498, 0, -12.0279 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
 
-[node name="ConstructionZone" type="Spatial" parent="."]
+[node name="Spatial2" parent="." instance=ExtResource( 24 )]
 
-[node name="StaticBody" type="StaticBody" parent="ConstructionZone"]
-transform = Transform( 1.47482, 0, 0, 0, 1, 0, 0, 0, 1.53187, -92.664, 0, -15.884 )
+[node name="conshouse" parent="." instance=ExtResource( 25 )]
+transform = Transform( 0.112475, 0, -0.487185, 0, 0.5, 0, 0.487185, 0, 0.112475, 5.83597, -0.0012145, -12.6958 )
 
-[node name="CollisionShape" type="CollisionShape" parent="ConstructionZone/StaticBody"]
-shape = SubResource( 6 )
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="conshouse"]
+transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7341, 4.31135, -1.55553 )
+frames = SubResource( 6 )
+frame = 5
+playing = true
 
-[node name="MeshInstance" type="MeshInstance" parent="ConstructionZone/StaticBody/CollisionShape"]
-transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0 )
-mesh = SubResource( 7 )
-material/0 = ExtResource( 1 )
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="conshouse"]
+transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7443, 2.67485, 1.62571 )
+frames = SubResource( 6 )
+frame = 5
+playing = true
 
-[node name="Pile" parent="ConstructionZone" instance=ExtResource( 21 )]
-transform = Transform( -0.571946, 0, 0.820292, 0, 1, 0, -0.820292, 0, -0.571946, -61.52, 0, 7.23257 )
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="conshouse"]
+transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.742, 6.14186, 2.56579 )
+frames = SubResource( 6 )
+frame = 5
+playing = true
 
-[node name="Big stack" parent="ConstructionZone" instance=ExtResource( 22 )]
-transform = Transform( 0.687227, 0, 0.726443, 0, 1, 0, -0.726443, 0, 0.687227, -70.5348, 0, -11.7212 )
+[node name="AnimatedSprite3D4" parent="conshouse" instance=ExtResource( 35 )]
+transform = Transform( -9.53674e-07, 0, 2, 0, 3, 0, -3, 0, -5.96046e-07, -11.2932, 3.9895, 4.87573 )

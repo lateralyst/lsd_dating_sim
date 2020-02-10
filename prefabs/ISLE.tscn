@@ -19,6 +19,7 @@ shape = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="6"]
 transform = Transform( 0.332062, 0.645385, -0.687905, -0.494709, 0.740095, 0.455546, 0.803118, 0.189043, 0.565035, 0, 38.9153, 0 )
+visible = false
 
 [node name="Spatial" parent="." index="7" instance=ExtResource( 3 )]
 transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 11.3488, 18.637, 17.9548 )
