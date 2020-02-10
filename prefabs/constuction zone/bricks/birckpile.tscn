@@ -1,0 +1,351 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://prefabs/constuction zone/bricks/brick2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/constuction zone/bricks/brick1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/constuction zone/bricks/brick3.tscn" type="PackedScene" id=3]
+
+[node name="Pile" type="Spatial"]
+
+[node name="Stack1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867, 0, 0 )
+
+[node name="brick1aa" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.248582, 1, 0.267339 )
+
+[node name="brick1aa4" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.206289, 3, 0.267 )
+
+[node name="brick1aa5" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.206289, 3, -0.26859 )
+
+[node name="brick1aa2" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -0.248582, 1, -0.260691 )
+
+[node name="brick1aa3" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( 1.62921e-07, 5.30863e-14, -1, 3.25841e-07, -1, 0, -1, -3.25841e-07, -1.62921e-07, -0.249, 2.5, -0.261 )
+
+[node name="brick1aa6" parent="Stack1" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.249, 0.5, -0.261 )
+
+[node name="brick2a" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.523998, 1, -0.0447752 )
+
+[node name="brick2a7" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.566458, 3, -0.0374811 )
+
+[node name="brick2a2" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.27905, 1.5, 0.236226 )
+
+[node name="brick2a4" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.241182, 2, 0.236 )
+
+[node name="brick2a8" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.241182, 0.5, 0.236 )
+
+[node name="brick2a5" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.465615, 2.5, -0.0221653 )
+
+[node name="brick2a6" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.299405, 2.5, -0.288052 )
+
+[node name="brick2a10" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.465615, 0, -0.0221653 )
+
+[node name="brick2a9" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.299405, 0, -0.288052 )
+
+[node name="brick2a3" parent="Stack1" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.27905, 1.5, -0.272991 )
+
+[node name="brick3a2" parent="Stack1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527944, 2, 0 )
+
+[node name="brick3a4" parent="Stack1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527944, 0.5, 0 )
+
+[node name="brick3a3" parent="Stack1" instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.304313, 2.5, 0.229097 )
+
+[node name="brick3a5" parent="Stack1" instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.304313, 0, 0.229097 )
+
+[node name="brick3a" parent="Stack1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.487601, 1.5, 0 )
+
+[node name="Stack2" type="Spatial" parent="."]
+
+[node name="brick1aa" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170948, 1, 0.00309443 )
+
+[node name="brick1aa5" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20343, 2.5, 0.003 )
+
+[node name="brick1aa12" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20343, 0, 0.003 )
+
+[node name="brick1aa7" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190329, 3, 0.0216372 )
+
+[node name="brick1aa11" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190329, 0.5, 0.0216372 )
+
+[node name="brick1aa4" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 1.00983, 2, 0.226656 )
+
+[node name="brick1aa6" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23936, 3, -0.0858625 )
+
+[node name="brick1aa10" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.94071, 0.5, 0.227 )
+
+[node name="brick1aa2" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.404304, 1.5, 0.24637 )
+
+[node name="brick1aa3" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.404304, 1.5, -0.266934 )
+
+[node name="brick1aa9" parent="Stack2" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0.952025, 0.5, -0.267 )
+
+[node name="brick2a" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.94336, 1, -0.257239 )
+
+[node name="brick2a7" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.701518, 3, -0.0624903 )
+
+[node name="brick2a3" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.45032, 2.5, -0.257 )
+
+[node name="brick2a4" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.451947, 2.5, 0.219292 )
+
+[node name="brick2a6" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.45032, 0, -0.257 )
+
+[node name="brick2a5" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.451947, 0, 0.219292 )
+
+[node name="brick2a2" parent="Stack2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17543, 1.5, 0.00280926 )
+
+[node name="brick3a" parent="Stack2" instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.936675, 1, 0.236494 )
+
+[node name="brick3a2" parent="Stack2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.173951, 2, -0.00713371 )
+
+[node name="brick3a3" parent="Stack2" instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 1.00916, 2, -0.249347 )
+
+[node name="Stack3" type="Spatial" parent="."]
+transform = Transform( 0.947154, 0, 0.320778, 0, 1, 0, -0.320778, 0, 0.947154, -2.849, 0, 0.132 )
+
+[node name="brick1aa7" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -2.08616e-07, 0, 1, 0, 1, 0, -1, 0, -2.08616e-07, -0.406032, 0.5, -0.261 )
+
+[node name="brick1aa8" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( 0.995832, 0, 0.0912062, 0, 1, 0, -0.0912062, 0, 0.995832, 0.355812, 1.5, -0.00197887 )
+
+[node name="brick1aa9" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -0.118179, 0, -0.992992, 0, 1, 0, 0.992992, 0, -0.118179, -0.412732, 1.5, 0.253295 )
+
+[node name="brick1aa11" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -2.68221e-07, 0, 1, 0, 1, 0, -1, 0, -2.68221e-07, 0.107071, 2, 0.361872 )
+
+[node name="brick1aa14" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -2.68221e-07, 0, 1, 0, 1, 0, -1, 0, -2.68221e-07, 0.107071, 0, 0.361872 )
+
+[node name="brick1aa10" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -1.49012e-07, 0, -1, 0, 1, 0, 1, 0, -1.49012e-07, -0.412732, 1.5, -0.273942 )
+
+[node name="brick1aa12" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, 0.149092, 2, -0.274 )
+
+[node name="brick1aa13" parent="Stack3" instance=ExtResource( 2 )]
+transform = Transform( -1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, 0.149092, 0, -0.274 )
+
+[node name="brick2a11" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, 0.122018, 1, 0.240303 )
+
+[node name="brick2a10" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -2.38419e-07, 0, 1, 0, 1, 0, -1, 0, -2.38419e-07, -0.398214, 0.5, 0.236 )
+
+[node name="brick2a12" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -2.98023e-07, 0, 1, 0, 1, 0, -1, 0, -2.98023e-07, -0.288062, 2.5, 0.354739 )
+
+[node name="brick2a15" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -0.678924, 0.59111, 0.435493, 0.539513, 0.803959, -0.250155, -0.497987, 0.0651174, -0.864739, 0.715537, 2.42025, 0.327715 )
+
+[node name="brick2a14" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( 0.974789, 0, 0.223131, 0, 1, 0, -0.223131, 0, 0.974789, 0.049412, 3, 0.0819229 )
+
+[node name="brick2a13" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.320234, 2.5, -0.287606 )
+
+[node name="brick2a9" parent="Stack3" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0.122018, 1, -0.268913 )
+
+[node name="brick3a6" parent="Stack3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, 0.370912, 0.5, 0 )
+
+[node name="brick3a7" parent="Stack3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -0.667687, 2, 0.108872 )
+
+[node name="brick3a9" parent="Stack3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -0.667687, 0, 0.108872 )
+
+[node name="brick3a5" parent="Stack3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.644633, 1, 0.00407732 )
+
+[node name="brick3a8" parent="Stack3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -0.638729, 3, 0.0868458 )
+
+[node name="Stack4" type="Spatial" parent="."]
+transform = Transform( 0.947154, 0, 0.320778, 0, 1, 0, -0.320778, 0, 0.947154, -0.487, 0, -1.019 )
+
+[node name="brick1aa9" parent="Stack4" instance=ExtResource( 2 )]
+transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, -4.58327, 1, 0.573688 )
+
+[node name="brick1aa8" parent="Stack4" instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -4.58327, 1, 0.0456585 )
+
+[node name="brick1aa7" parent="Stack4" instance=ExtResource( 2 )]
+transform = Transform( 1.19209e-07, 6.39488e-14, -1, 3.25841e-07, -1, 0, -1, -3.25842e-07, -1.19209e-07, -4.584, 2.5, 0.0449998 )
+
+[node name="brick1aa10" parent="Stack4" instance=ExtResource( 2 )]
+transform = Transform( 1.19209e-07, 6.39488e-14, -1, 3.25841e-07, -1, 0, -1, -3.25842e-07, -1.19209e-07, -4.584, 0.5, 0.045 )
+
+[node name="brick2a14" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -3.81069, 1, 0.306349 )
+
+[node name="brick2a13" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, -4.056, 1.5, 0.543 )
+
+[node name="brick2a11" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, -4.77901, 2.5, 0.565988 )
+
+[node name="brick2a10" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4.03528, 2.5, 0.0182971 )
+
+[node name="brick2a15" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, -4.8003, 0.5, 0.284185 )
+
+[node name="brick2a12" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -1.78814e-07, 0, 1, 0, 1, 0, -1, 0, -1.78814e-07, -4.03528, 0.5, 0.0182974 )
+
+[node name="brick2a9" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, -4.05564, 1.5, 0.0333587 )
+
+[node name="brick3a7" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, -3.80675, 2, 0.30635 )
+
+[node name="brick3a10" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, -3.80675, 0, 0.30635 )
+
+[node name="brick3a6" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( -1.49012e-07, 0, 1, 0, 1, 0, -1, 0, -1.49012e-07, -4.03037, 2.5, 0.535447 )
+
+[node name="brick3a8" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( -2.38419e-07, 0, 1, 0, 1, 0, -1, 0, -2.38419e-07, -4.03037, 0.5, 0.535447 )
+
+[node name="brick3a5" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -4.82229, 1.5, 0.306349 )
+
+[node name="brick3a9" parent="Stack4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -4.23697, 3, 0.273238 )
+
+[node name="brick2a16" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -2.98023e-07, 0, 1, 0, 1, 0, -1, 0, -2.98023e-07, -4.57587, 2, 0.542351 )
+
+[node name="brick2a17" parent="Stack4" instance=ExtResource( 1 )]
+transform = Transform( -2.98023e-07, 0, 1, 0, 1, 0, -1, 0, -2.98023e-07, -4.57587, 0, 0.542351 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.66252, 0.490464, 0.566138, -0.737901, 0.55724, 0.380771, -0.12872, -0.670022, 0.731096, 0, 7.07467, 0 )
+visible = false
+
+[node name="Ground" type="Spatial" parent="."]
+
+[node name="brick1aa" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( 0.609772, 0, -0.792577, 0, 1, 0, 0.792577, 0, 0.609772, -2.86859, 0.5, 1.98094 )
+
+[node name="brick1aa2" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( 0.901183, 0, -0.433439, 0, 1, 0, 0.433439, 0, 0.901183, -3.79059, 0, 2.09124 )
+
+[node name="brick1aa8" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( -5.54388e-08, -0.340281, 0.940324, 1, -1.62921e-07, 0, 1.53198e-07, 0.940324, 0.340281, -4.89869, 0.231675, 5.40815 )
+
+[node name="brick1aa3" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( 0.290402, 0, -0.956905, 0, 1, 0, 0.956905, 0, 0.290402, -3.79059, 0, 3.17739 )
+
+[node name="brick1aa4" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( -0.998377, 0, 0.0569543, 0, 1, 0, -0.0569543, 0, -0.998377, -4.05528, 0, 4.09362 )
+
+[node name="brick1aa7" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( -0.998377, 0, 0.0569543, 0, 1, 0, -0.0569543, 0, -0.998377, -5.17914, 0.5, 3.36839 )
+
+[node name="brick1aa5" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( -0.998377, 0, 0.0569543, 0, 1, 0, -0.0569543, 0, -0.998377, -4.58323, 0, 4.23463 )
+
+[node name="brick1aa6" parent="Ground" instance=ExtResource( 2 )]
+transform = Transform( -0.954681, 0.186733, 0.231765, 0.189422, 0.981836, -0.0108059, -0.229574, 0.0335852, -0.972712, -6.29287, 0.0260065, 3.89042 )
+
+[node name="brick2a6" parent="Ground" instance=ExtResource( 1 )]
+transform = Transform( -0.132425, -0.0581334, 0.989487, 0.839394, 0.524336, 0.143143, -0.527145, 0.849525, -0.0206386, -4.68987, 0.234505, 4.74596 )
+
+[node name="brick2a3" parent="Ground" instance=ExtResource( 1 )]
+transform = Transform( 0.175607, 0, 0.98446, 0, 1, 0, -0.98446, 0, 0.175607, -5.37743, 0, 4.30743 )
+
+[node name="brick2a4" parent="Ground" instance=ExtResource( 1 )]
+transform = Transform( 0.0403236, 0, 0.999187, 0, 1, 0, -0.999187, 0, 0.0403236, -5.3247, 0, 3.56384 )
+
+[node name="brick2a5" parent="Ground" instance=ExtResource( 1 )]
+transform = Transform( 0.986208, 0, 0.165512, 0, 1, 0, -0.165512, 0, 0.986208, -5.77329, 0, 2.68058 )
+
+[node name="brick2a2" parent="Ground" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.846927, -0.531709, 0, 0.531709, 0.846927, -4.27059, 0.244735, 1.52988 )
+
+[node name="brick3a" parent="Ground" instance=ExtResource( 3 )]
+transform = Transform( 0.743997, 0, -0.668183, 0, 1, 0, 0.668183, 0, 0.743997, -2.73606, 0, 2.01039 )
+
+[node name="brick3a2" parent="Ground" instance=ExtResource( 3 )]
+transform = Transform( 5.98773e-08, 0.367524, 0.930014, 1, -1.62921e-07, 0, 1.51519e-07, 0.930014, -0.367524, -5.15113, 0.227884, 1.56174 )
+
+[node name="brick3a3" parent="Ground" instance=ExtResource( 3 )]
+transform = Transform( 1.49157e-07, 0.915522, -0.402268, 1, -1.62921e-07, 0, -6.55377e-08, -0.402268, -0.915522, -4.76763, 0.227884, 2.64616 )
+
+[node name="brick3a4" parent="Ground" instance=ExtResource( 3 )]
+transform = Transform( -0.947174, -0.0897125, -0.307918, -0.078407, 0.99572, -0.0489208, 0.310989, -0.0221935, -0.950154, -5.14841, -0.00697339, 2.646 )
+
+[node name="Stack5" type="Spatial" parent="."]
+transform = Transform( 0.984159, 0, 0.177291, 0, 1, 0, -0.177291, 0, 0.984159, 2.40484, 0, -0.59283 )
+
+[node name="brick1aa" parent="Stack5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0610156, 0, 0 )
+
+[node name="brick1aa4" parent="Stack5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.548715, 2, 0 )
+
+[node name="brick1aa2" parent="Stack5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061, 1, 0 )
+
+[node name="brick1aa3" parent="Stack5" instance=ExtResource( 2 )]
+transform = Transform( -0.153089, 0, 0.988212, 0.390867, 0.918453, 0.0605514, -0.907627, 0.395529, -0.140606, -0.416643, 1.5, 0.272034 )
+
+[node name="brick2a" parent="Stack5" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615443, 0, 0 )
+
+[node name="brick2a3" parent="Stack5" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.426867, 1.5, -0.332167 )
+
+[node name="brick2a2" parent="Stack5" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.310304, 0.5, -0.354399 )
+
+[node name="brick3a" parent="Stack5" instance=ExtResource( 3 )]
+transform = Transform( 0.999525, 0, 0.0308176, 0, 1, 0, -0.0308176, 0, 0.999525, 0.616301, 0, 0.00655174 )
+
+[node name="brick3a3" parent="Stack5" instance=ExtResource( 3 )]
+transform = Transform( 0.999525, 0, 0.0308176, 0, 1, 0, -0.0308176, 0, 0.999525, -0.603749, 1, -0.0615762 )
+
+[node name="brick3a2" parent="Stack5" instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.43408, 0.5, 0.214062 )
