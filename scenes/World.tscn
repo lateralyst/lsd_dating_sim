@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -23,7 +23,6 @@
 [ext_resource path="res://lessdark.tscn" type="PackedScene" id=21]
 [ext_resource path="res://ISLEvdraw.tscn" type="PackedScene" id=22]
 [ext_resource path="res://DARKER.tscn" type="PackedScene" id=23]
-[ext_resource path="res://ConstructionZone.tscn" type="PackedScene" id=24]
 [ext_resource path="res://conshouse.tscn" type="PackedScene" id=25]
 [ext_resource path="res://bricksground.tscn" type="PackedScene" id=26]
 [ext_resource path="res://image/sun1.png" type="Texture" id=27]
@@ -35,6 +34,8 @@
 [ext_resource path="res://image/sun8.png" type="Texture" id=33]
 [ext_resource path="res://image/sun3.png" type="Texture" id=34]
 [ext_resource path="res://flatlanderD.tscn" type="PackedScene" id=35]
+[ext_resource path="res://prefabs/barrier2.tscn" type="PackedScene" id=36]
+[ext_resource path="res://prefabs/dirtpile.dae" type="PackedScene" id=37]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -1721,28 +1722,38 @@ transform = Transform( 0.255714, 0, 0.429663, 0, 0.5, 0, -0.429663, 0, 0.255714,
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
 
-[node name="Spatial2" parent="." instance=ExtResource( 24 )]
-
 [node name="conshouse" parent="." instance=ExtResource( 25 )]
 transform = Transform( 0.112475, 0, -0.487185, 0, 0.5, 0, 0.487185, 0, 0.112475, 5.83597, -0.0012145, -12.6958 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7341, 4.31135, -1.55553 )
 frames = SubResource( 6 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7443, 2.67485, 1.62571 )
 frames = SubResource( 6 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.742, 6.14186, 2.56579 )
 frames = SubResource( 6 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3D4" parent="conshouse" instance=ExtResource( 35 )]
 transform = Transform( -9.53674e-07, 0, 2, 0, 3, 0, -3, 0, -5.96046e-07, -11.2932, 3.9895, 4.87573 )
+
+[node name="barrier2" parent="conshouse" instance=ExtResource( 36 )]
+transform = Transform( 0.92428, 0, -0.381716, 0, 1, 0, 0.381716, 0, 0.92428, -1.20245, 0, -12.5734 )
+
+[node name="barrier3" parent="conshouse" instance=ExtResource( 36 )]
+transform = Transform( 0.522306, 0, -0.852759, 0, 1, 0, 0.852759, 0, 0.522306, 9.92385, 0, -25.6064 )
+
+[node name="dirtpile" parent="conshouse" instance=ExtResource( 37 )]
+transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.00059, 0, -17.3719 )
+
+[node name="dirtpile2" parent="conshouse" instance=ExtResource( 37 )]
+transform = Transform( 1.02193, 0, -1.71921, 0, 2, 0, 1.71921, 0, 1.02193, -5.06641, 0, -26.2139 )
