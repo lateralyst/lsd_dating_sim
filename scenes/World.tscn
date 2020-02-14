@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://lessdark.tscn" type="PackedScene" id=21]
 [ext_resource path="res://ISLEvdraw.tscn" type="PackedScene" id=22]
 [ext_resource path="res://DARKER.tscn" type="PackedScene" id=23]
+[ext_resource path="res://prefabs/amnestyartfarm.tscn" type="PackedScene" id=24]
 [ext_resource path="res://conshouse.tscn" type="PackedScene" id=25]
 [ext_resource path="res://bricksground.tscn" type="PackedScene" id=26]
 [ext_resource path="res://image/sun1.png" type="Texture" id=27]
@@ -36,6 +37,12 @@
 [ext_resource path="res://flatlanderD.tscn" type="PackedScene" id=35]
 [ext_resource path="res://prefabs/barrier2.tscn" type="PackedScene" id=36]
 [ext_resource path="res://prefabs/dirtpile.dae" type="PackedScene" id=37]
+[ext_resource path="res://prefabs/artfarmb.tscn" type="PackedScene" id=38]
+[ext_resource path="res://prefabs/artfarmd.dae" type="PackedScene" id=39]
+[ext_resource path="res://prefabs/artfarmculling4.dae" type="PackedScene" id=40]
+[ext_resource path="res://dirtpileS.tscn" type="PackedScene" id=41]
+[ext_resource path="res://artfarmculling4.tscn" type="PackedScene" id=42]
+[ext_resource path="res://hill9.tscn" type="PackedScene" id=43]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -55,7 +62,8 @@ sun_latitude = -180.0
 background_mode = 2
 background_sky = SubResource( 4 )
 ambient_light_color = Color( 0.921569, 0.878431, 0.878431, 1 )
-adjustment_brightness = 0.82
+adjustment_enabled = true
+adjustment_brightness = 0.91
 adjustment_contrast = 1.44
 adjustment_saturation = 2.4
 
@@ -1728,19 +1736,19 @@ transform = Transform( 0.112475, 0, -0.487185, 0, 0.5, 0, 0.487185, 0, 0.112475,
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7341, 4.31135, -1.55553 )
 frames = SubResource( 6 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7443, 2.67485, 1.62571 )
 frames = SubResource( 6 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.742, 6.14186, 2.56579 )
 frames = SubResource( 6 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3D4" parent="conshouse" instance=ExtResource( 35 )]
@@ -1752,8 +1760,52 @@ transform = Transform( 0.92428, 0, -0.381716, 0, 1, 0, 0.381716, 0, 0.92428, -1.
 [node name="barrier3" parent="conshouse" instance=ExtResource( 36 )]
 transform = Transform( 0.522306, 0, -0.852759, 0, 1, 0, 0.852759, 0, 0.522306, 9.92385, 0, -25.6064 )
 
-[node name="dirtpile" parent="conshouse" instance=ExtResource( 37 )]
-transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.00059, 0, -17.3719 )
-
 [node name="dirtpile2" parent="conshouse" instance=ExtResource( 37 )]
 transform = Transform( 1.02193, 0, -1.71921, 0, 2, 0, 1.71921, 0, 1.02193, -5.06641, 0, -26.2139 )
+visible = false
+
+[node name="dirtpileS" parent="conshouse" instance=ExtResource( 41 )]
+transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.001, 0.002, -17.372 )
+
+[node name="dirtpileS2" parent="conshouse" instance=ExtResource( 41 )]
+transform = Transform( 1.02193, 0, -1.71921, 0, 2, 0, 1.71921, 0, 1.02193, -5.10393, 0.002, -26.0497 )
+
+[node name="dirtpile" parent="conshouse" instance=ExtResource( 37 )]
+transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.00059, 0, -17.3719 )
+visible = false
+
+[node name="amnestyartfarm" parent="." instance=ExtResource( 24 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -67.4069, 17.2071, -25.0275 )
+visible = false
+
+[node name="artfarmb" parent="." instance=ExtResource( 38 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -101.881, 17.207, -44.5063 )
+visible = false
+
+[node name="artfarmd" parent="." instance=ExtResource( 39 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -108.706, 27.6471, 16.0904 )
+
+[node name="artfarmculling4" parent="." instance=ExtResource( 40 )]
+transform = Transform( -2, 0, -6.51683e-07, 0, 2, 0, 6.51683e-07, 0, -2, 159.438, 32.3832, -30.0651 )
+visible = false
+
+[node name="artfarmculling5" parent="." instance=ExtResource( 42 )]
+transform = Transform( -2, 0, -6.51683e-07, 0, 2, 0, 6.51683e-07, 0, -2, 159.438, 32.383, -30.065 )
+
+[node name="Hills" type="Spatial" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -4.53755, 0, -0.609016 )
+
+[node name="hill12" parent="Hills" instance=ExtResource( 43 )]
+transform = Transform( -1.62921e-07, 0, 0.963, 0, 0.597565, 0, -0.85339, 0, -1.33891e-07, 1.2318, 0, -1.70261 )
+
+[node name="hill16" parent="Hills" instance=ExtResource( 43 )]
+transform = Transform( -1.62921e-07, 0, 0.963, 0, 0.534206, 0, -0.85339, 0, -1.33891e-07, -0.176169, 0, -2.61447 )
+
+[node name="hill15" parent="Hills" instance=ExtResource( 43 )]
+transform = Transform( -1.62921e-07, 0, 0.963, 0, 0.745585, 0, -0.883518, 0, -1.38617e-07, 0.210418, 0, -0.516506 )
+
+[node name="hill14" parent="Hills" instance=ExtResource( 43 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -1.12245, 0, 0.609016 )
+
+[node name="hill13" parent="Hills" instance=ExtResource( 43 )]
+transform = Transform( -1.62921e-07, 0, 1.017, 0, 0.663723, 0, -1, 0, -1.6569e-07, -0.109099, 0, 2.03892 )
