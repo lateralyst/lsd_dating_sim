@@ -1,6 +1,5 @@
 extends KinematicBody
 
-const antiDelta = 60  # multiply with delta to get to about 1
 const gravity = 100
 const mouseSensitivity = 0.13
 const run_mod = 1.5
@@ -11,15 +10,14 @@ var jumpForce = 30
 var camera_angle = 0
 var movement = Vector3()
 
-var tracked_movement = 0.0
-var max_tracked_movement = 100000.0
-
 var rotateMode = false
 var isTurning = false
 
 var canMove = true
 var canInteract = false
 var interactionTarget
+
+onready var main_script = get_node("/root/GameManager/Main")
 
 func _ready():
 	pass
@@ -67,13 +65,10 @@ func move(delta):
 	if !is_on_floor():
 		movement.y -= gravity * delta
 	
-	var actual_movement = move_and_slide(movement * delta * antiDelta * walkSpeed, Vector3(0, 1, 0))
+	var actual_movement = move_and_slide(movement * walkSpeed, Vector3(0, 1, 0), true)
 	
-	if tracked_movement < max_tracked_movement:
-		if actual_movement.length() > 1:
-			tracked_movement += actual_movement.length()
-	else:
-		max_movement_exceeded()
+	var hor_dist_travelled_this_frame = Vector2(actual_movement.x, actual_movement.z).length()
+	main_script.increment_player_distance(hor_dist_travelled_this_frame)
 
 func _input(event):
 	if event.is_action_pressed("rotateMode"):

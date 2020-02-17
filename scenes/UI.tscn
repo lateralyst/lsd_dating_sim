@@ -78,7 +78,9 @@ text = "Quit"
 flat = true
 align = 0
 
-[node name="TimeLabel" type="Label" parent="CanvasLayer"]
+[node name="TimeLabel" type="Label" parent="CanvasLayer" groups=[
+"UI",
+]]
 margin_left = 479.0
 margin_top = 53.7616
 margin_right = 616.0
@@ -91,7 +93,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Subtitles" type="Button" parent="CanvasLayer"]
+[node name="Subtitles" type="Button" parent="CanvasLayer" groups=[
+"UI",
+]]
 visible = false
 anchor_left = 0.5
 anchor_top = 1.0
@@ -112,7 +116,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DialogueChoices" type="HBoxContainer" parent="CanvasLayer"]
+[node name="DialogueChoices" type="HBoxContainer" parent="CanvasLayer" groups=[
+"UI",
+]]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -129,7 +135,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" groups=[
+"UI",
+]]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

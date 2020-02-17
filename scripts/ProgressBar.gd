@@ -1,13 +1,12 @@
 extends ProgressBar
 
-onready var player
+onready var main_script
 
 func _ready():
-	player = weakref(get_tree().get_nodes_in_group("Player")[0])
+	main_script = get_node("/root/GameManager/Main")
 	self.value = self.max_value
 
 func _process(delta):
-	if !player.get_ref():
-		player = weakref(get_tree().get_nodes_in_group("Player")[0])
-	self.value = (1.0 - (player.get_ref().tracked_movement / player.get_ref().max_tracked_movement)) * self.max_value
+	if main_script:
+		self.value = (1.0 - (main_script.tracked_movement / main_script.max_tracked_movement)) * self.max_value
 	pass

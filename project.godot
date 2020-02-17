@@ -23,7 +23,6 @@ config/icon="res://icon.png"
 
 GameManager="*res://scenes/GameManager.tscn"
 UI="*res://scenes/UI.tscn"
-Player="*res://scenes/Player.tscn"
 
 [display]
 
