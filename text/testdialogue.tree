@@ -28,11 +28,11 @@
 #cont "Anyway, what didya want from me?"
 
 
-#start dia2 "Test"
+#start dia2 "👁️"
 
 #cont "test2"
 
 #choice test1 > a = 1
 #choice test2 > a = 2
 
-#cont Whatever.
+#end

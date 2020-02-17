@@ -1,0 +1,220 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://conshouse.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/Bricks Big stack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/constuction zone/bricks/birckpile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/barrier2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://dirtpile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://crate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://PLANK.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/DIRT2t.png" type="Texture" id=8]
+[ext_resource path="res://bricksground.tscn" type="PackedScene" id=9]
+[ext_resource path="res://prefabs/constuction zone/CGrass/GrassB.tscn" type="PackedScene" id=10]
+[ext_resource path="res://prefabs/constuction zone/CGrass/GrassC.tscn" type="PackedScene" id=11]
+[ext_resource path="res://prefabs/constuction zone/CGrass/GrassD.tscn" type="PackedScene" id=12]
+[ext_resource path="res://prefabs/constuction zone/CGrass/GrassA.tscn" type="PackedScene" id=13]
+[ext_resource path="res://prefabs/constuction zone/gravel.tscn" type="PackedScene" id=14]
+[ext_resource path="res://prefabs/constuction zone/CGrass/stake.tscn" type="PackedScene" id=15]
+[ext_resource path="res://prefabs/constuction zone/groundbumps2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://prefabs/constuction zone/groundbumps.tscn" type="PackedScene" id=17]
+[ext_resource path="res://mound3.tscn" type="PackedScene" id=18]
+[ext_resource path="res://prefabs/constuction zone/mound4.tscn" type="PackedScene" id=19]
+[ext_resource path="res://prefabs/constuction zone/bricks/brick2.tscn" type="PackedScene" id=20]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 0.001, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 8 )
+metallic_specular = 0.0
+uv1_scale = Vector3( 3, 3, 1 )
+
+[sub_resource type="ProceduralSky" id=4]
+
+[sub_resource type="Environment" id=5]
+background_mode = 3
+background_sky = SubResource( 4 )
+background_color = Color( 0.870588, 0.835294, 0.835294, 1 )
+adjustment_saturation = 4.95
+
+[node name="Spatial" type="Spatial"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.797219, -0.264948, 0.542444, -0.0113291, 0.891821, 0.452246, -0.603584, -0.366684, 0.707975, 0, 8.52072, 0 )
+shadow_enabled = true
+
+[node name="conshouse" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.112476, 0, -0.487185, 0, 0.5, 0, 0.487185, 0, 0.112476, 5.836, 0, -12.696 )
+
+[node name="barrier2" parent="conshouse" instance=ExtResource( 4 )]
+transform = Transform( 0.92428, 0, -0.381716, 0, 1, 0, 0.381716, 0, 0.92428, -1.202, 0, -12.573 )
+
+[node name="barrier3" parent="conshouse" instance=ExtResource( 4 )]
+transform = Transform( 0.522305, 0, -0.852759, 0, 1, 0, 0.852759, 0, 0.522305, 9.924, 0, -25.606 )
+
+[node name="dirtpile" parent="conshouse" instance=ExtResource( 5 )]
+transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.001, 0, -17.372 )
+
+[node name="dirtpile3" parent="conshouse" instance=ExtResource( 5 )]
+transform = Transform( 1.99975, 0, 0.0314824, 0, 2, 0, -0.0314824, 0, 1.99975, 42.1578, 0, -6.42714 )
+
+[node name="dirtpile2" parent="conshouse" instance=ExtResource( 5 )]
+transform = Transform( 1.02193, 0, -1.71921, 0, 2, 0, 1.71921, 0, 1.02193, -5.066, 0, -26.214 )
+
+[node name="Big stack" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.487958, 0, 0.109072, 0, 0.5, 0, -0.109072, 0, 0.487958, -3.502, 0, -11.471 )
+
+[node name="Pile" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.183657, 0, 0.465049, 0, 0.5, 0, -0.465049, 0, -0.183657, -8.088, 0, 5.042 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 2.14479, 0, -6.76976 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody/CollisionShape"]
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="crate" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.441678, 0, 0.23435, 0, 0.5, 0, -0.23435, 0, 0.441678, 17.1909, 0, -9.44289 )
+
+[node name="PLANK" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.348207, 0, -0.35882, 0, 0.5, 0, 0.35882, 0, 0.348207, 15.9583, 0, -11.0825 )
+
+[node name="PLANK2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.46752, 0.0451825, -0.171417, 0.0527141, -0.49705, 0.0127582, -0.169252, -0.0300016, -0.469525, 15.903, 0.0668099, -11.6574 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
+
+[node name="Grass" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0308, 0, -13.6652 )
+
+[node name="GrassA" parent="Grass" instance=ExtResource( 13 )]
+
+[node name="GrassB" parent="Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777861, 0, 0.45706 )
+
+[node name="GrassC" parent="Grass" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1597, 0, -0.0677881 )
+
+[node name="GrassD" parent="Grass" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.342032, 0, -0.231311 )
+
+[node name="Grass2" type="Spatial" parent="."]
+transform = Transform( 0.652958, 0, -0.757394, 0, 1, 0, 0.757394, 0, 0.652958, 11.2106, 0, -14.1295 )
+
+[node name="GrassA" parent="Grass2" instance=ExtResource( 13 )]
+
+[node name="GrassB" parent="Grass2" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777861, 0, 0.45706 )
+
+[node name="GrassC" parent="Grass2" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1597, 0, -0.0677881 )
+
+[node name="GrassD" parent="Grass2" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.342032, 0, -0.231311 )
+
+[node name="Grass3" type="Spatial" parent="."]
+transform = Transform( 0.652958, 0, -0.757394, 0, 1, 0, 0.757394, 0, 0.652958, -7.00037, 0, 4.61846 )
+
+[node name="GrassA" parent="Grass3" instance=ExtResource( 13 )]
+
+[node name="GrassB" parent="Grass3" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777861, 0, 0.45706 )
+
+[node name="GrassC" parent="Grass3" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1597, 0, -0.0677881 )
+
+[node name="GrassC2" parent="Grass3" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.396847, 0, 0.53613 )
+
+[node name="GrassD" parent="Grass3" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.342032, 0, -0.231311 )
+
+[node name="GrassD2" parent="Grass3" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84752, 0, -0.528246 )
+
+[node name="GrassD3" parent="Grass3" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39623, 0, -0.917302 )
+
+[node name="Grass4" type="Spatial" parent="."]
+transform = Transform( 0.952534, 0, -0.304432, 0, 1, 0, 0.304432, 0, 0.952534, -6.39145, 0, 7.67219 )
+
+[node name="GrassA" parent="Grass4" instance=ExtResource( 13 )]
+
+[node name="GrassB" parent="Grass4" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777861, 0, 0.45706 )
+
+[node name="GrassC" parent="Grass4" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1597, 0, -0.0677881 )
+
+[node name="GrassC2" parent="Grass4" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.396847, 0, 0.53613 )
+
+[node name="GrassD" parent="Grass4" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.342032, 0, -0.231311 )
+
+[node name="GrassD2" parent="Grass4" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0.691048, 0, -0.158636 )
+
+[node name="Spatial" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.201757, 0, -0.457487, 0, 0.5, 0, 0.457487, 0, -0.201757, 8.81206, 0, -12.9372 )
+
+[node name="stake" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 18.5878, 0.402729, -14.9532 )
+
+[node name="stake2" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.193995, 0, -0.981003, 0, 0.5, 0, 0.981003, 0, -0.193995, 15.7447, -0.149404, -15.3844 )
+
+[node name="stake3" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.193995, 0, -0.981003, 0, 0.5, 0, 0.981003, 0, -0.193995, 19.3737, -0.493617, -12.948 )
+
+[node name="stake4" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.194678, -0.012123, -0.980568, 0.0257912, 0.499611, -0.0298277, 0.980529, -0.0155484, -0.193901, 18.588, -0.371743, 1.07461 )
+
+[node name="stake5" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.984185, 0.0347093, 0.162981, 0.0641471, 0.49862, -0.0373937, -0.165127, -0.0131738, -0.985921, 16.2702, 0.245055, 2.81329 )
+
+[node name="stake6" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.986273, 0.00202367, 0.165077, -0.000359029, 0.499822, -0.0266542, -0.165127, -0.0131738, -0.985921, 11.457, -0.211855, 4.73608 )
+
+[node name="gravel" parent="." instance=ExtResource( 14 )]
+transform = Transform( -0.032457, 0, -0.999473, 0, 1, 0, 0.999473, 0, -0.032457, 9.47539, 0, -18.6203 )
+
+[node name="groundbumps" parent="." instance=ExtResource( 17 )]
+transform = Transform( 0.495924, 0, 0.0637141, 0, 0.5, 0, -0.0637141, 0, 0.495924, 6.81003, -0.12219, -3.39388 )
+
+[node name="groundbumps2" parent="." instance=ExtResource( 16 )]
+transform = Transform( 0.495924, 0, 0.0637141, 0, 0.5, 0, -0.0637141, 0, 0.495924, -3.0747, -0.119903, -2.12394 )
+
+[node name="mound3" parent="." instance=ExtResource( 18 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0785937, 0, -14.4666 )
+
+[node name="mound6" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71546, 0, -17.1808 )
+
+[node name="mound4" parent="." instance=ExtResource( 18 )]
+transform = Transform( -0.22359, 0, -0.974683, 0, 1, 0, 0.974683, 0, -0.22359, 17.8715, 0, 4.82928 )
+
+[node name="barrier4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.221113, 0, -0.448452, 0, 0.5, 0, 0.448452, 0, 0.221113, 18.207, 0, 9.88004 )
+
+[node name="barrier5" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.00293176, 0, -0.499992, 0, 0.5, 0, 0.499992, 0, -0.00293176, 9.65442, 0, 11.9017 )
+
+[node name="barrier6" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.00293176, 0, -0.499992, 0, 0.5, 0, 0.499992, 0, -0.00293176, 0.656876, 0, 11.9017 )
+
+[node name="barrier7" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.354877, 0, -0.352225, 0, 0.5, 0, 0.352225, 0, -0.354877, -7.05961, 0, 8.67388 )
+
+[node name="brick2a" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.34282, -0.363453, -0.0194036, 0, 0.0266555, -0.499289, 0.36397, 0.342333, 0.0182761, 14.0894, 0.20493, -13.8848 )
+
+[node name="mound5" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8 )

@@ -6,4 +6,5 @@
 [node name="brick2a" instance=ExtResource( 2 )]
 
 [node name="Cube" parent="." index="0"]
+use_in_baked_light = true
 material/0 = ExtResource( 1 )
