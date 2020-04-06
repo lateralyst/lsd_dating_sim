@@ -1,0 +1,19 @@
+#start dia3 "skksk"
+
+#cont "test2"
+
+#choice test1 > a = 1
+#choice test2 > a = 2
+#end
+
+#cont "Anyway, what didya want from me?"
+
+
+#start dia4 "skksk"
+
+#cont "test2"
+
+#choice test1 > a = 1
+#choice test2 > a = 2
+
+#end

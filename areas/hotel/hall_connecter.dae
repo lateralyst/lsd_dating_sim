@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.81.16 commit date:2019-12-04, commit time:11:32, hash:f1aa4d18d49d</authoring_tool>
+    </contributor>
+    <created>2020-03-26T03:14:04</created>
+    <modified>2020-03-26T03:14:04</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane-mesh" name="Plane">
+      <mesh>
+        <source id="Plane-mesh-positions">
+          <float_array id="Plane-mesh-positions-array" count="174">-1 -1 0 -1 1 0 -1 0 0 0 -1 0 0 1 0 0 0 0 -2 -1 0 -2 1 0 -2 0 0 -3 -1 0 -3 1 0 -3 0 0 -1 2 0 0 2 0 -2 2 0 -3 2 0 -1 -2 0 0 -2 0 -2 -2 0 -3 -2 0 -4 -1 0 -4 1 0 -4 0 0 -4 2 0 -4 -2 0 -5 -1 0 -5 1 0 -5 0 0 -5 2 0 -5 -2 0 -1 -2 4 0 -2 4 -2 -2 4 -3 -2 4 -4 -2 4 -5 -2 4 0 -2 4 -1 2 4 0 2 4 -2 2 4 -3 2 4 -4 2 4 -5 2 4 -6 -1 0 -6 1 0 -6 0 0 -5 -1 0 -5 1 0 -5 0 0 -6 2 0 -5 2 0 -6 -2 0 -5 -2 0 -6 -2 4 -5 -2 4 -5 -2 4 -6 2 4 -5 2 4</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-positions-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-normals">
+          <float_array id="Plane-mesh-normals-array" count="12">0 0 1 0 1 0 0 -1 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-map-0">
+          <float_array id="Plane-mesh-map-0-array" count="408">0.5 0 0 0.5 0 0 0.5 0.5 0 1 0 0.5 0 1 0 0.5 0 0.5 0 0.5 0 0 0 0 0 1 0 0.5 0 0.5 0 0.5 0 0 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0.5 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0.5 0 0 1 0 0.5 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0.5 0 0 0 0 0 0 0 0 0 0 0 1 0 0.5 0 0.5 0 1 0 1 0 1 0 0 0.5 0 0.5 0 0.5 1 0 1 0 1 0 0 0.5 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0.5 0 0 0.5 0 0 0.5 0.5 0 1 0 0.5 0.5 1 0 1 0 1 0 0 0.5 0 0.5 0 0 0 0.5 0 0.5 0 0.5 1 0 1 0 1 0 0 0.5 1 0 0 0.5 0 0.5 0.5 0 0.5 0.5 0.5 0.5 1 0 1 0 1 0 1 0 0.5 0 0.5 0 0.5 0 0 0 1 0 1 0 0.5 0 0.5 0 0.5 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0.5 1 0.5 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 1 0 1 0 0.5 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0 1 0 1 0 0.5 0 1 0 1 0 1 0 0 0 0 0.5 0 0.5 1 0.5 1 0 1 0 0 0 1 0.5 1 0 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0.5 0 0.5 0.5 0 0.5 0.5 0.5 0.5 1 0 1 0.5 1 0.5 1 0 1 0 0 0 0 0.5 0 0 0 0 0 0.5 0 0.5 1 0.5 1 0 1 0 0 0 1 0.5 1</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-map-0-array" count="204" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-mesh-vertices">
+          <input semantic="POSITION" source="#Plane-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-material" count="68">
+          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 2 0 1 0 0 2 5 0 3 1 0 4 2 0 5 1 0 6 8 0 7 2 0 8 2 0 9 6 0 10 0 0 11 7 0 12 11 0 13 8 0 14 8 0 15 9 0 16 6 0 17 1 0 18 14 0 19 7 0 20 7 0 21 15 0 22 10 0 23 4 0 24 12 0 25 1 0 26 6 0 27 16 0 28 0 0 29 9 0 30 18 0 31 6 0 32 0 0 33 17 0 34 3 0 35 10 0 36 22 0 37 11 0 38 11 0 39 20 0 40 9 0 41 9 0 42 24 0 43 19 0 44 15 0 45 21 0 46 10 0 47 22 0 48 25 0 49 20 0 50 20 0 51 29 0 52 24 0 53 21 0 54 27 0 55 22 0 56 23 0 57 26 0 58 21 0 59 16 1 60 31 1 61 17 1 62 13 2 63 37 2 64 12 2 65 30 3 66 38 3 67 36 3 68 39 3 69 30 3 70 32 3 71 40 3 72 32 3 73 33 3 74 41 3 75 33 3 76 34 3 77 42 3 78 34 3 79 35 3 80 46 0 81 45 0 82 43 0 83 48 0 84 44 0 85 45 0 86 47 0 87 49 0 88 44 0 89 43 0 90 52 0 91 46 0 92 51 1 93 54 1 94 52 1 95 50 2 96 56 2 97 49 2 98 53 3 99 57 3 100 55 3 101 3 0 102 5 0 103 2 0 104 5 0 105 4 0 106 1 0 107 1 0 108 7 0 109 8 0 110 2 0 111 8 0 112 6 0 113 7 0 114 10 0 115 11 0 116 8 0 117 11 0 118 9 0 119 1 0 120 12 0 121 14 0 122 7 0 123 14 0 124 15 0 125 4 0 126 13 0 127 12 0 128 6 0 129 18 0 130 16 0 131 9 0 132 19 0 133 18 0 134 0 0 135 16 0 136 17 0 137 10 0 138 21 0 139 22 0 140 11 0 141 22 0 142 20 0 143 9 0 144 20 0 145 24 0 146 15 0 147 23 0 148 21 0 149 22 0 150 27 0 151 25 0 152 20 0 153 25 0 154 29 0 155 21 0 156 26 0 157 27 0 158 23 0 159 28 0 160 26 0 161 16 1 162 30 1 163 31 1 164 13 2 165 38 2 166 37 2 167 30 3 168 37 3 169 38 3 170 39 3 171 37 3 172 30 3 173 40 3 174 39 3 175 32 3 176 41 3 177 40 3 178 33 3 179 42 3 180 41 3 181 34 3 182 46 0 183 48 0 184 45 0 185 48 0 186 47 0 187 44 0 188 47 0 189 50 0 190 49 0 191 43 0 192 51 0 193 52 0 194 51 1 195 53 1 196 54 1 197 50 2 198 57 2 199 56 2 200 53 3 201 56 3 202 57 3 203</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Plane" name="Plane" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane-mesh" name="Plane">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-material" target="#Material-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

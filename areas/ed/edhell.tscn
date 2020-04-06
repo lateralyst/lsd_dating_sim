@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://areas/ed/artfarmculling4.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://areas/ed/isles3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://areas/ed/hill9.tscn" type="PackedScene" id=4]
+
+
+
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 3
+background_sky = SubResource( 1 )
+background_color = Color( 0.67451, 0.690196, 0.619608, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="isles3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.98365, 0, 0.255238, 0, 2, 0, -0.255238, 0, 1.98365, -103.964, 0, -11.8045 )
+
+[node name="artfarmculling4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.74579, 0, -0.975811, 0, 2, 0, 0.975811, 0, 1.74579, 79.507, 34.6872, 59.8402 )
+
+[node name="artfarmculling5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -5, 6.51683e-07, 0, -1.62921e-06, -2, 0, 0, 0, 5, 7.70661, 0, 15.649 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.445102, 0.651156, -0.614719, 0.229665, 0.580498, 0.781201, 0.865528, -0.488894, 0.108833, -16.6728, 24.8105, 0 )
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.491165, 0, 0.0935791, 0, 0.5, 0, -0.0935791, 0, -0.491165, 7.68954, 13.4029, 12.3802 )
+
+[node name="Hillgroup1" type="Spatial" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.1934, 2.68571, 16.467 )
+
+[node name="hill9" parent="Hillgroup1" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, 0.667008, -0.180545, -0.818031 )
+
+[node name="hill11" parent="Hillgroup1" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, -0.997675, -0.180545, -1.05198 )
+
+[node name="hill10" parent="Hillgroup1" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1.1, 0, -0.850471, 0, -0.526021, -0.891582, -0.180545, 0.744215 )
+
+[node name="Hillgroup2" type="Spatial" parent="."]
+transform = Transform( 1.31675, 0, -1.50538, 0, 2, 0, 1.50538, 0, 1.31675, -21.0055, 2.50817, -5.01368 )
+
+[node name="hill9" parent="Hillgroup2" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, 0.667008, -0.180545, -0.818031 )
+
+[node name="hill12" parent="Hillgroup2" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, -1.57258, -0.180545, 1.84692 )
+
+[node name="hill11" parent="Hillgroup2" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, -0.997675, -0.180545, -1.05198 )
+
+[node name="hill13" parent="Hillgroup2" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1, 0, -0.850471, 0, -0.526021, -0.362664, -0.460145, 2.93482 )
+
+[node name="hill10" parent="Hillgroup2" instance=ExtResource( 4 )]
+transform = Transform( -0.526021, 0, 0.850471, 0, 1.1, 0, -0.850471, 0, -0.526021, -0.654049, -0.180545, 0.472652 )

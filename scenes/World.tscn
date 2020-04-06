@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://material/GRASS.material" type="Material" id=1]
 [ext_resource path="res://image/cool tree/coolground.png" type="Texture" id=2]
@@ -16,16 +16,16 @@
 [ext_resource path="res://prefabs/ISLE.tscn" type="PackedScene" id=14]
 [ext_resource path="res://prefabs/grave1.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/minor/TalkingGrass.tscn" type="PackedScene" id=16]
-[ext_resource path="res://sewertest.tscn" type="PackedScene" id=17]
-[ext_resource path="res://SewerTest2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://prefabs/Sewers/SewerConsBlue.tscn" type="PackedScene" id=19]
-[ext_resource path="res://prefabs/Sewers/SewerConAmerican.tscn" type="PackedScene" id=20]
-[ext_resource path="res://lessdark.tscn" type="PackedScene" id=21]
-[ext_resource path="res://ISLEvdraw.tscn" type="PackedScene" id=22]
+[ext_resource path="res://areas/Sewers/sewertest.tscn" type="PackedScene" id=17]
+[ext_resource path="res://areas/Sewers/SewerTest2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://areas/Sewers/SewerConsBlue.tscn" type="PackedScene" id=19]
+[ext_resource path="res://areas/Sewers/SewerConAmerican.tscn" type="PackedScene" id=20]
+[ext_resource path="res://areas/first/lessdark.tscn" type="PackedScene" id=21]
+[ext_resource path="res://areas/first/ISLEvdraw.tscn" type="PackedScene" id=22]
 [ext_resource path="res://DARKER.tscn" type="PackedScene" id=23]
 [ext_resource path="res://prefabs/amnestyartfarm.tscn" type="PackedScene" id=24]
-[ext_resource path="res://conshouse.tscn" type="PackedScene" id=25]
-[ext_resource path="res://bricksground.tscn" type="PackedScene" id=26]
+[ext_resource path="res://areas/constuction zone/conshouse.tscn" type="PackedScene" id=25]
+[ext_resource path="res://areas/constuction zone/bricksground.tscn" type="PackedScene" id=26]
 [ext_resource path="res://image/sun1.png" type="Texture" id=27]
 [ext_resource path="res://image/sun2.png" type="Texture" id=28]
 [ext_resource path="res://image/sun6.png" type="Texture" id=29]
@@ -34,17 +34,31 @@
 [ext_resource path="res://image/sun5.png" type="Texture" id=32]
 [ext_resource path="res://image/sun8.png" type="Texture" id=33]
 [ext_resource path="res://image/sun3.png" type="Texture" id=34]
-[ext_resource path="res://flatlanderD.tscn" type="PackedScene" id=35]
-[ext_resource path="res://prefabs/barrier2.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scenes/ExitToCons.gd" type="Script" id=35]
+[ext_resource path="res://areas/constuction zone/barrier2.tscn" type="PackedScene" id=36]
 [ext_resource path="res://prefabs/dirtpile.dae" type="PackedScene" id=37]
-[ext_resource path="res://prefabs/artfarmb.tscn" type="PackedScene" id=38]
-[ext_resource path="res://prefabs/artfarmd.dae" type="PackedScene" id=39]
+[ext_resource path="res://areas/constuction zone/scenes/artfarmb.tscn" type="PackedScene" id=38]
+[ext_resource path="res://areas/constuction zone/models/artfarmd.dae" type="PackedScene" id=39]
 [ext_resource path="res://prefabs/artfarmculling4.dae" type="PackedScene" id=40]
-[ext_resource path="res://dirtpileS.tscn" type="PackedScene" id=41]
-[ext_resource path="res://artfarmculling4.tscn" type="PackedScene" id=42]
-[ext_resource path="res://hill9.tscn" type="PackedScene" id=43]
-[ext_resource path="res://isles3.tscn" type="PackedScene" id=44]
+[ext_resource path="res://areas/constuction zone/dirtpileS.tscn" type="PackedScene" id=41]
+[ext_resource path="res://areas/ed/artfarmculling4.tscn" type="PackedScene" id=42]
+[ext_resource path="res://areas/ed/hill9.tscn" type="PackedScene" id=43]
+[ext_resource path="res://areas/ed/isles3.tscn" type="PackedScene" id=44]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=45]
+[ext_resource path="res://prefabs/BitchTree.tscn" type="PackedScene" id=46]
+[ext_resource path="res://scenes/ExitToHotel.gd" type="Script" id=47]
+
+
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 0.001, 1 )
@@ -67,7 +81,7 @@ ambient_light_color = Color( 0.921569, 0.878431, 0.878431, 1 )
 adjustment_enabled = true
 adjustment_brightness = 0.91
 adjustment_contrast = 1.44
-adjustment_saturation = 2.4
+adjustment_saturation = 2.14
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -76,6 +90,9 @@ animations = [ {
 "name": "default",
 "speed": 3.0
 } ]
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 1.72081, 7.61047, 1.55025 )
 
 [node name="World" type="Spatial"]
 
@@ -1741,23 +1758,20 @@ transform = Transform( 0.112475, 0, -0.487185, 0, 0.5, 0, 0.487185, 0, 0.112475,
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7341, 4.31135, -1.55553 )
 frames = SubResource( 6 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.7443, 2.67485, 1.62571 )
 frames = SubResource( 6 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="conshouse"]
 transform = Transform( -3.25842e-07, 0, 2, 0, 2, 0, -2, 0, -3.25842e-07, -13.742, 6.14186, 2.56579 )
 frames = SubResource( 6 )
-frame = 7
+frame = 3
 playing = true
-
-[node name="AnimatedSprite3D4" parent="conshouse" instance=ExtResource( 35 )]
-transform = Transform( -9.53674e-07, 0, 2, 0, 3, 0, -3, 0, -5.96046e-07, -11.2932, 3.9895, 4.87573 )
 
 [node name="barrier2" parent="conshouse" instance=ExtResource( 36 )]
 transform = Transform( 0.92428, 0, -0.381716, 0, 1, 0, 0.381716, 0, 0.92428, -1.20245, 0, -12.5734 )
@@ -1778,6 +1792,18 @@ transform = Transform( 1.02193, 0, -1.71921, 0, 2, 0, 1.71921, 0, 1.02193, -5.10
 [node name="dirtpile" parent="conshouse" instance=ExtResource( 37 )]
 transform = Transform( 1.84314, 0, -0.776415, 0, 2, 0, 0.776415, 0, 1.84314, -8.00059, 0, -17.3719 )
 visible = false
+
+[node name="ExitToCons" type="Spatial" parent="conshouse" groups=[
+"interactable",
+]]
+transform = Transform( -0.0391648, 0, 1.99962, 0, 2, 0, -1.99962, 0, -0.0391648, -12.7363, 3.74546, 0.687181 )
+script = ExtResource( 35 )
+
+[node name="Area" type="Area" parent="conshouse/ExitToCons"]
+
+[node name="CollisionShape" type="CollisionShape" parent="conshouse/ExitToCons/Area"]
+transform = Transform( 0.999878, 0, -0.0156026, 0, 1, 0, 0.0156026, 0, 0.999878, 0, 0, 0 )
+shape = SubResource( 7 )
 
 [node name="amnestyartfarm" parent="." instance=ExtResource( 24 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -67.4069, 17.2071, -25.0275 )
@@ -1812,6 +1838,22 @@ transform = Transform( -1.62921e-07, 0, 0.963, 0, 0.745585, 0, -0.883518, 0, -1.
 [node name="hill14" parent="Hills" instance=ExtResource( 43 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -1.12245, 0, 0.609016 )
 
+[node name="ExitToHotel" type="Spatial" parent="Hills/hill14" groups=[
+"interactable",
+]]
+transform = Transform( 0.121994, 0, -0.48489, 0, 0.5, 0, 0.48489, 0, 0.121994, 0.178312, 0.935758, 0.123145 )
+script = ExtResource( 47 )
+
+[node name="Area" type="Area" parent="Hills/hill14/ExitToHotel"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Hills/hill14/ExitToHotel/Area"]
+transform = Transform( 0.999878, 0, -0.0156026, 0, 1, 0, 0.0156026, 0, 0.999878, 0, 0, 0 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Hills/hill14/ExitToHotel/Area"]
+transform = Transform( 0.999877, 0, -0.0156025, 0, 1, 0, 0.0156025, 0, 0.999877, -8.78861, 0, 18.874 )
+shape = SubResource( 7 )
+
 [node name="hill13" parent="Hills" instance=ExtResource( 43 )]
 transform = Transform( -1.62921e-07, 0, 1.017, 0, 0.663723, 0, -1, 0, -1.6569e-07, -0.109099, 0, 2.03892 )
 
@@ -1820,3 +1862,6 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -131.456, -11.489, -21.9542 )
 
 [node name="Player" parent="." instance=ExtResource( 45 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.20269, 0, 0 )
+
+[node name="Tree" parent="." instance=ExtResource( 46 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8947, 2.09819, 20.2332 )

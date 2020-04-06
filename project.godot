@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="lsd_dating_sim"
-run/main_scene="res://scenes/World.tscn"
+run/main_scene="res://areas/room/Room.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -30,6 +30,10 @@ window/size/width=640
 window/size/height=480
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "skybox_converter_plugin" )
 
 [input]
 
@@ -89,4 +93,4 @@ interact={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://material/2/default_env.tres"
