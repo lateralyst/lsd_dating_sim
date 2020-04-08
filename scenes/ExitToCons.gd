@@ -1,6 +1,6 @@
 extends Spatial
 
-const otherSceneFile = "res://ConstructionZone.tscn"
+const otherSceneFile = "res://areas/constuction zone/ConstructionZone.tscn"
 var otherScene
 
 func _ready():

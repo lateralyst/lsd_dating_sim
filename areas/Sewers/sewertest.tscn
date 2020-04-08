@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://prefabs/Notes_Sewers.png" type="Texture" id=1]
+[ext_resource path="res://areas/first/old/Notes_Sewers.png" type="Texture" id=1]
 [ext_resource path="res://areas/Sewers/Sewer10.tscn" type="PackedScene" id=2]
+
 
 [node name="SewerSystem" type="Spatial"]
 

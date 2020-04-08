@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/doorb3.png-5cff89986a01164ebf8803d8e8784c53.s3tc.stex"
+path.etc="res://.import/doorb3.png-5cff89986a01164ebf8803d8e8784c53.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://areas/debug/better/doorb3.png"
+dest_files=[ "res://.import/doorb3.png-5cff89986a01164ebf8803d8e8784c53.s3tc.stex", "res://.import/doorb3.png-5cff89986a01164ebf8803d8e8784c53.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

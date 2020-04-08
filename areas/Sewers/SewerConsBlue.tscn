@@ -1,8 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://prefabs/sludge.material" type="Material" id=1]
+[ext_resource path="res://areas/Sewers/sludge.material" type="Material" id=1]
 [ext_resource path="res://areas/Sewers/SewerCons4.dae" type="PackedScene" id=2]
 [ext_resource path="res://areas/Sewers/sewerstblue.png" type="Texture" id=3]
+
 
 
 [sub_resource type="SpatialMaterial" id=1]

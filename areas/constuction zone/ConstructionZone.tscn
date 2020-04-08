@@ -1,13 +1,13 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://areas/constuction zone/conshouse.tscn" type="PackedScene" id=1]
-[ext_resource path="res://prefabs/Bricks Big stack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://areas/constuction zone/Bricks Big stack.tscn" type="PackedScene" id=2]
 [ext_resource path="res://areas/constuction zone/bricks/birckpile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://areas/constuction zone/barrier2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://areas/constuction zone/dirtpile.tscn" type="PackedScene" id=5]
 [ext_resource path="res://areas/constuction zone/crate.tscn" type="PackedScene" id=6]
 [ext_resource path="res://areas/constuction zone/PLANK.tscn" type="PackedScene" id=7]
-[ext_resource path="res://prefabs/DIRT2t.png" type="Texture" id=8]
+[ext_resource path="res://areas/constuction zone/DIRT2t.png" type="Texture" id=8]
 [ext_resource path="res://areas/constuction zone/bricksground.tscn" type="PackedScene" id=9]
 [ext_resource path="res://areas/constuction zone/CGrass/GrassB.tscn" type="PackedScene" id=10]
 [ext_resource path="res://areas/constuction zone/CGrass/GrassC.tscn" type="PackedScene" id=11]
@@ -21,12 +21,6 @@
 [ext_resource path="res://areas/constuction zone/mound4.tscn" type="PackedScene" id=19]
 [ext_resource path="res://areas/constuction zone/bricks/brick2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=21]
-
-
-
-
-
-
 
 
 

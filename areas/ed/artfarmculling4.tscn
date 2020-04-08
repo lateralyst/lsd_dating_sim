@@ -1,9 +1,11 @@
 [gd_scene load_steps=43 format=2]
 
-[ext_resource path="res://prefabs/artfarmculling4.dae" type="PackedScene" id=1]
+[ext_resource path="res://areas/ed/artfarmculling4.dae" type="PackedScene" id=1]
 [ext_resource path="res://material/OUTLINE.tres" type="Material" id=2]
 [ext_resource path="res://Circle002.gd" type="Script" id=3]
-[ext_resource path="res://artfarmculling4.gd" type="Script" id=4]
+[ext_resource path="res://areas/ed/artfarmculling4.gd" type="Script" id=4]
+
+
 
 
 [sub_resource type="ArrayMesh" id=1]

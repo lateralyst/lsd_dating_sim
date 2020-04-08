@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://areas/ed/amnestyartfarm.dae" type="PackedScene" id=1]
+
+
+[node name="amnestyartfarm" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Circle" index="0"]
+transform = Transform( -0.0455006, 0.720375, -0.692091, -0.515567, 0.576475, 0.63393, 0.85564, 0.385663, 0.345172, -15.492, 11.5243, 0 )
+visible = false

@@ -9,7 +9,8 @@
 [ext_resource path="res://areas/ed/circel5.png" type="Texture" id=7]
 [ext_resource path="res://material/2/darkoutline.tres" type="Material" id=8]
 [ext_resource path="res://material/ROCK.material" type="Material" id=9]
-[ext_resource path="res://prefabs/ArtAmnestyArtFarm.material" type="Material" id=10]
+[ext_resource path="res://areas/ed/ArtAmnestyArtFarm.material" type="Material" id=10]
+
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {

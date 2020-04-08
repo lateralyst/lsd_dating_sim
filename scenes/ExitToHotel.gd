@@ -1,6 +1,6 @@
 extends Spatial
 
-const otherSceneFile = "res://prefabs/hotel/hotelhell.tscn"
+const otherSceneFile = "res://areas/hotel/hotelhell.tscn"
 var otherScene
 
 func _ready():
