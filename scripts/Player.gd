@@ -32,6 +32,7 @@ func _physics_process(delta):
 
 func move(delta):
 	var input = Vector3()
+	var speed = walkSpeed
 	
 	if Input.is_action_pressed("left"):
 		rotate_y(turnSpeed)
@@ -47,7 +48,7 @@ func move(delta):
 			changeVerticalCamAngle(turnSpeed * 40.0)
 		if Input.is_action_pressed("back"):
 			changeVerticalCamAngle(-turnSpeed * 40.0)
-	elif !isTurning:
+	else:
 		if Input.is_action_pressed("forward"):
 			input.x = 1
 		if Input.is_action_pressed("back"):
@@ -57,6 +58,9 @@ func move(delta):
 #		if Input.is_action_pressed("right"):
 #			input.z = 1
 	
+	if Input.is_action_pressed("sprint"):
+		speed *= run_mod
+
 	movement = input.rotated(Vector3.UP, rotation.y).normalized()
 	
 	if is_on_floor() && Input.is_action_just_pressed("jump"):
@@ -65,7 +69,7 @@ func move(delta):
 	if !is_on_floor():
 		movement.y -= gravity * delta
 	
-	var actual_movement = move_and_slide(movement * walkSpeed, Vector3(0, 1, 0), true)
+	var actual_movement = move_and_slide(movement * speed, Vector3(0, 1, 0), true)
 	
 	var hor_dist_travelled_this_frame = Vector2(actual_movement.x, actual_movement.z).length()
 	main_script.increment_player_distance(hor_dist_travelled_this_frame)
